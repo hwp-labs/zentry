@@ -1,0 +1,20 @@
+[
+  {
+    "avatarUrl": "https://github.com/hwp-labs.png",
+    "name": "Webmaster",
+    "email": "webmaster@hwplabs.com",
+    "telephone": "08169960927",
+    "password": "$2a$10$abcdefghijklmnopqrstuvwxyz123456",
+    "role": "ADMIN",
+    "createdAt": "1970-01-01T00:00:00Z"
+  },
+  {
+    "avatarUrl": "https://github.com/2gbeh.png",
+    "name": "Emmanuel Tugbeh",
+    "email": "dehphantom@yahoo.com",
+    "telephone": "08169960927",
+    "password": "$2a$10$abcdefghijklmnopqrstuvwxyz123456",
+    "role": "USER",
+    "createdAt": "1992-09-15T00:00:00Z"
+  }
+]

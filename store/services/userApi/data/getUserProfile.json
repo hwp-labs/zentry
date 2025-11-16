@@ -1,0 +1,8 @@
+{
+  "401": {
+    "msg": "Missing Authorization Header"
+  },
+  "404": {
+    "error": "User not found"
+  }
+}

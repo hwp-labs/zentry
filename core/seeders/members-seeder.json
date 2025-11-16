@@ -1,0 +1,36 @@
+[
+  {
+    "surname": "Tugbeh",
+    "otherNames": "Emmanuel Osaretin",
+    "gender": "MALE",
+    "birthDate": {
+      "month": "09",
+      "day": "15"
+    },
+    "telephone1": "08169960927",
+    "occupation": "Software Engineer",
+    "maritalStatus": "MARRIED",
+    "anniversaryDate": {
+      "month": "12",
+      "day": "02"
+    },
+    "status": "ACTIVE"
+  },
+  {
+    "surname": "Tugbeh",
+    "otherNames": "Sandra Ehiaghe",
+    "gender": "FEMALE",
+    "birthDate": {
+      "month": "11",
+      "day": "15"
+    },
+    "telephone1": "07066157335",
+    "occupation": "Fashion Designer",
+    "maritalStatus": "MARRIED",
+    "anniversaryDate": {
+      "month": "12",
+      "day": "02"
+    },
+    "status": "ACTIVE"
+  }
+]

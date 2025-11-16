@@ -1,0 +1,13 @@
+{
+    "200": {
+        "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MDgxMzA2NCwianRpIjoiYzY3Yzg4NDQtMGU0Yy00YjY1LWI2N2YtODczMTlkMmIxMGJlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjcwYzY2MTg2LTFlNGEtNDcyMC04ZjlmLTBlMzQ1MjVmMWQ4MiIsIm5iZiI6MTc2MDgxMzA2NCwiY3NyZiI6IjA4OTA2MmFhLWE1YTAtNDUyNy1hYjIwLTEyNzYyY2Q4YjVhOCIsImV4cCI6MTc2MDg5OTQ2NCwicm9sZSI6InZlbmRvciJ9.8YAn1CqQ96d7qw-XF2oiF0j94gFsWSr-wzq0Gmn0c9Y",
+        "message": "Login successful",
+        "user": {
+            "email": "samuelalisigwe22@gmail.com",
+            "role": "vendor"
+        }
+    },
+    "401": {
+        "message": "Invalid credentials"
+    }
+}

@@ -1,0 +1,41 @@
+{
+  "message": "Request failed with status code 404",
+  "name": "AxiosError",
+  "stack": "AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/934d1_469d74db._.js:3694:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/934d1_469d74db._.js:4207:212)\n    at Axios.request (http://localhost:3000/_next/static/chunks/934d1_469d74db._.js:4978:49)\n    at async Object.login [as mutationFn] (http://localhost:3000/_next/static/chunks/Documents_www_vivid-foods_7c6fd0d6._.js:61:21)",
+  "config": {
+    "transitional": {
+      "silentJSONParsing": true,
+      "forcedJSONParsing": true,
+      "clarifyTimeoutError": false
+    },
+    "adapter": [
+      "xhr",
+      "http",
+      "fetch"
+    ],
+    "transformRequest": [
+      null
+    ],
+    "transformResponse": [
+      null
+    ],
+    "timeout": 0,
+    "xsrfCookieName": "XSRF-TOKEN",
+    "xsrfHeaderName": "X-XSRF-TOKEN",
+    "maxContentLength": -1,
+    "maxBodyLength": -1,
+    "env": {},
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Content-Type": "application/json"
+    },
+    "baseURL": "/api",
+    "withCredentials": true,
+    "method": "post",
+    "url": "/auth/login",
+    "data": "{\"email\":\"samuelalisigwe22@gmail.com\",\"password\":\"samuel123$\",\"rememberMe\":true}",
+    "allowAbsoluteUrls": true
+  },
+  "code": "ERR_BAD_REQUEST",
+  "status": 404
+}
