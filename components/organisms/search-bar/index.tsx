@@ -1,4 +1,4 @@
-import { IconSearch } from "@tabler/icons-react";
+import { SearchIcon } from "lucide-react";
 import { Input } from "@/components/shadcn/ui/input";
 import { Clickable } from "@/components/atoms/clickable";
 
@@ -11,7 +11,7 @@ export const SearchBar: React.FC = () => {
         className="border-0 shadow-none"
       />
       <Clickable>
-        <IconSearch />
+        <SearchIcon />
       </Clickable>
     </section>
   );
