@@ -8,11 +8,8 @@ export default function MainLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="bg-gray-50 min-h-screen">
-      <Banner />
-      <Header />
+    <div className="">
       {children}
-      <Footer />
     </div>
   );
 }

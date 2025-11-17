@@ -1,12 +1,10 @@
-<p style="text-align:center;">
-  <a href="https://zentry.vercel.app" target="blank">
-    <img src="./app/favicon.ico" alt="" />
-  </a>
-  <h1 style="margin:0;text-align:center;">ZEntry</h1>
-  <h2 style="margin:0;text-align:center;">Internal Database Web App - Corel Ministry Int'l</h2>
-</p>
+<a href="https://zentry.vercel.app" target="_blank">
+  <img src="./app/favicon.ico" alt="" />
+</a>
 
-<!-- ## Internal Database Web App - Corel Ministry Int'l -->
+# ZEntry
+
+## Internal Database Web App - Corel Ministry Int'l
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue.svg)](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)
 [![React](https://img.shields.io/badge/React-19.x-58c4dc.svg)](https://react.dev/learn/start-a-new-react-project)
