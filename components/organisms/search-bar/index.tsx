@@ -1,19 +1,18 @@
-"use client"; 
-
-import { SearchIcon } from "lucide-react";
-import { TextInput } from "@/components/molecules/form-builder/ui/text-input";
-import { Button } from "@/components/shadcn/ui/button";
+import { IconSearch } from "@tabler/icons-react";
+import { Input } from "@/components/shadcn/ui/input";
+import { Clickable } from "@/components/atoms/clickable";
 
 export const SearchBar: React.FC = () => {
   return (
-    <div className="flex-1 flex items-center gap-4">
-      <div className="relative flex-1">
-        <TextInput name="q" placeholder="Search products" required />
-        <SearchIcon className="absolute top-2.5 right-3" size={18} />
-      </div>
-      <Button className="bg-contrast flex items-center gap-2 px-4 py-2">
-        Search
-      </Button>
-    </div>
+    <section className="flex-center-between m-4 h-[56px] gap-4 rounded-full bg-gray-50 px-4">
+      <Input
+        type="search"
+        placeholder="Search name, telephone"
+        className="border-0 shadow-none"
+      />
+      <Clickable>
+        <IconSearch />
+      </Clickable>
+    </section>
   );
 };

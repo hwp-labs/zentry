@@ -16,7 +16,7 @@ export const Clickable: React.FC<Props> = ({
   return (
     <button
       onClick={onClick}
-      className={clsx("dim-48 flex-center-center", debug && "debug")}
+      className={clsx("size-[48px] flex-center-center", debug && "debug")}
     >
       {children}
     </button>
