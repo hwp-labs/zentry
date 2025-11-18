@@ -8,7 +8,7 @@ export const SearchBar: React.FC = () => {
       <Input
         type="search"
         placeholder="Search name, telephone"
-        className="border-0 shadow-none"
+        className="border-0 shadow-none text-body-lg"
       />
       <Clickable>
         <SearchIcon size={24} />

@@ -36,7 +36,7 @@ export const FilterChips: React.FC<Props> = ({
             )}
           >
             {checked && <IconCheck size={18} />}
-            <p className="text-sm font-medium tracking-wide">{item}</p>
+            <p className="text-label-lg">{item}</p>
           </Badge>
         );
       })}
