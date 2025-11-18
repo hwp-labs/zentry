@@ -11,8 +11,8 @@
     "occupation": "Software Engineer",
     "maritalStatus": "MARRIED",
     "anniversaryDate": {
-      "month": "12",
-      "day": "02"
+      "month": 9,
+      "day": 15
     },
     "status": "ACTIVE"
   },
@@ -21,8 +21,8 @@
     "otherNames": "Sandra Ehiaghe",
     "gender": "FEMALE",
     "birthDate": {
-      "month": "11",
-      "day": "15"
+      "month": 11,
+      "day": 15
     },
     "telephone1": "07066157335",
     "occupation": "Fashion Designer",

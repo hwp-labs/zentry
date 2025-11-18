@@ -17,6 +17,7 @@ import { SearchBar } from "@/components/organisms/search-bar";
 import { FilterChips } from "@/components/atoms/chips/filter-chips";
 import membersSeeder from "@/core/seeders/members-seeder.json";
 import { Fab } from "@/components/organisms/fab";
+import { MemberPresenter, MemberModel } from "@/core/models/MemberModel";
 
 export default function HomePage() {
   return (
@@ -73,17 +74,18 @@ const ListContainer = () => {
   return (
     <section className="debug-3 flex flex-col gap-4">
       {membersSeeder.map((item, i) => {
+        const Item = new MemberPresenter(item as MemberModel);
         const firstChip = i === 0;
         return (
           <div key={i} className="debug flex items-center gap-2.5">
             <Avatar className="size-[32px]">
-              <AvatarImage src="https://github.com/2gbeh.png" alt="" />
-              <AvatarFallback>E</AvatarFallback>
+              <AvatarImage src={Item.AvatarUrl} alt="" />
+              <AvatarFallback>{Item.Initials}</AvatarFallback>
             </Avatar>
             <div className="flex flex-1 flex-col">
               <div className="flex-center-between">
-                <Typography.P>{item.otherNames}</Typography.P>
-                <Typography.Small>{item.birthDate?.day}</Typography.Small>
+                <Typography.P>{Item.DisplayName}</Typography.P>
+                <Typography.Small>{Item.BirthDate}</Typography.Small>
               </div>
               <Typography.Small>{item.surname}</Typography.Small>
             </div>
