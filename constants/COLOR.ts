@@ -1,3 +1,5 @@
+export type ColorType = keyof typeof COLOR;
+
 export const COLOR = {
   brand: "#7a296c",
   contrast: "#297937",

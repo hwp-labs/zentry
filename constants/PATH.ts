@@ -1,3 +1,5 @@
+export type PathType = keyof typeof PATH;
+
 export const PATH = {
   home: "/",
   // auth
