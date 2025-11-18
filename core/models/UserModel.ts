@@ -5,7 +5,7 @@ export interface UserModel extends BaseModel {
   avatarUrl?: string;
   name: string;
   email: string;
-  password: string;
+  // password: string;
   role: UserRoleEnum;
   device?: DeviceValueObject;
 }

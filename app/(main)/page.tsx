@@ -32,7 +32,7 @@ export default function HomePage() {
           <ListContainer />
         </ListGroup>
       </section>
-      <Fab />
+      <Fab variant="md" />
     </div>
   );
 }
