@@ -11,7 +11,7 @@ export const SearchBar: React.FC = () => {
         className="border-0 shadow-none"
       />
       <Clickable>
-        <SearchIcon />
+        <SearchIcon size={24} />
       </Clickable>
     </section>
   );

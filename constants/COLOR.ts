@@ -1,6 +1,11 @@
 export type ColorType = keyof typeof COLOR;
 
 export const COLOR = {
+  white: '#fff',
+  offWhite: '#fafafa',
+  black: '#000',
+  offBlack: '#0a0a0a',
+  // 
   brand: "#7a296c",
   contrast: "#297937",
   accentGold: "#d2af6d",

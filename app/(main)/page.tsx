@@ -14,15 +14,16 @@ import {
 import { Typography } from "@/components/atoms/typography";
 import { AppBar } from "@/components/organisms/app-bar";
 import { SearchBar } from "@/components/organisms/search-bar";
-import { Chips } from "@/components/atoms/chips";
+import { FilterChips } from "@/components/atoms/chips/filter-chips";
 import membersSeeder from "@/core/seeders/members-seeder.json";
+import { Fab } from "@/components/organisms/fab";
 
 export default function HomePage() {
   return (
     <div className="">
       <AppBar />
       <SearchBar />
-      <Chips.Filter data={["All", "Favour", "Mercy", "Victory", "Men", "+"]} />
+      <FilterChips list={["All", "Favour", "Mercy", "Victory"]} />
       <section className="mt-4 px-4">
         <ListGroup title="Today" badgeVariant="destructive" badgeText={9}>
           <ListContainer />
@@ -31,6 +32,7 @@ export default function HomePage() {
           <ListContainer />
         </ListGroup>
       </section>
+      <Fab />
     </div>
   );
 }
