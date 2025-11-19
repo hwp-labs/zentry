@@ -40,7 +40,7 @@ export default function HomePage() {
           />
         </ListGroup>
       </section>
-      <Fab variant="md" />
+      <Fab variant="sm" />
     </div>
   );
 }
@@ -68,7 +68,7 @@ const ListGroup: React.FC<Props> = ({
     >
       <AccordionItem value="accordionItem1">
         <AccordionTrigger className="p-0">
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2.5">
             {icon}
             <p className="text-title-md">{title}</p>
             <Badge variant={badgeVariant}>{badgeText}</Badge>
