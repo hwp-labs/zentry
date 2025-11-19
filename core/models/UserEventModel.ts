@@ -1,7 +1,7 @@
 import { PrimaryKeyType } from "./common/BaseModel";
 import { AuditableModel } from "./common/AuditableModel";
 
-export interface EventNotificationModel extends AuditableModel {
+export interface UserEventModel extends AuditableModel {
+  userId: PrimaryKeyType;
   eventId: PrimaryKeyType;
-  memberId: PrimaryKeyType;
 }

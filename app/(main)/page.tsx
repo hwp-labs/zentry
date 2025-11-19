@@ -14,44 +14,52 @@ import { Fab } from "@/components/organisms/fab";
 import { MemberModel } from "@/core/models/MemberModel";
 import { MemberPipe } from "@/core/pipes/MemberPipe";
 import membersSeeder from "@/core/seeders/members-seeder.json";
-import { CalendarDaysIcon, Calendar1Icon, HomeIcon, PhoneIcon, SmartphoneIcon } from "lucide-react";
+import {
+  CalendarDaysIcon,
+  Calendar1Icon,
+  HomeIcon,
+  PhoneIcon,
+  SmartphoneIcon,
+} from "lucide-react";
 
 export default function HomePage() {
   return (
-    <div className="">
+    <>
       <AppBar />
-      <SearchBar />
-      <FilterChips list={["All", "Favour", "Mercy", "Victory"]} />
-      <section className="mt-4 h-[calc(100vh-200px)] overflow-y-scroll px-4">
-        <ListGroup
-          title="Today"
-          badgeVariant="destructive"
-          badgeText={3}
-          icon={<Calendar1Icon size={20} />}
-        >
-          <ListContainer
-            data={membersSeeder.slice(0, 3) as unknown as MemberModel[]}
-          />
-        </ListGroup>
-        <ListGroup
-          title="Upcoming"
-          badgeText={7}
-          icon={<CalendarDaysIcon size={20} />}
-        >
-          <ListContainer
-            data={membersSeeder.slice(3) as unknown as MemberModel[]}
-          />
-        </ListGroup>
-        <ListGroup
-          title="This month"
-          badgeText={10}
-          icon={<CalendarDaysIcon size={20} />}
-        >
-          <ListContainer data={membersSeeder as unknown as MemberModel[]} />
-        </ListGroup>
-      </section>
+      <div className="container-fluid">
+        <SearchBar />
+        <FilterChips list={["All", "Favour", "Mercy", "Victory"]} />
+        <section className="mt-4 h-[calc(100vh-200px)] overflow-y-scroll px-4">
+          <ListGroup
+            title="Today"
+            badgeVariant="destructive"
+            badgeText={3}
+            icon={<Calendar1Icon size={20} />}
+          >
+            <ListContainer
+              data={membersSeeder.slice(0, 3) as unknown as MemberModel[]}
+            />
+          </ListGroup>
+          <ListGroup
+            title="Upcoming"
+            badgeText={7}
+            icon={<CalendarDaysIcon size={20} />}
+          >
+            <ListContainer
+              data={membersSeeder.slice(3) as unknown as MemberModel[]}
+            />
+          </ListGroup>
+          <ListGroup
+            title="This month"
+            badgeText={10}
+            icon={<CalendarDaysIcon size={20} />}
+          >
+            <ListContainer data={membersSeeder as unknown as MemberModel[]} />
+          </ListGroup>
+        </section>
+      </div>
       <Fab variant="sm" />
-    </div>
+    </>
   );
 }
 
@@ -81,7 +89,9 @@ const ListGroup: React.FC<Props> = ({
           <div className="flex items-center gap-2.5">
             {icon}
             <p className="text-title-md">{title}</p>
-            <Badge variant={badgeVariant}>{badgeText}</Badge>
+            <Badge variant={badgeVariant} className="font-medium">
+              {badgeText}
+            </Badge>
           </div>
         </AccordionTrigger>
         <AccordionContent>{children}</AccordionContent>

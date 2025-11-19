@@ -1,5 +1,9 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "./base.css";
+@import "./components.css";
+@import "./utilities.css";
+@import "./typography.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -89,8 +93,6 @@
 }
 
 .dark {
-  --brand: #7a296c;
-  --contrast: #3a418f;
   --background: oklch(0.141 0.005 285.823);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.21 0.006 285.885);
@@ -124,105 +126,4 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.40 0.12 330);
-}
-
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-
-  body {
-    @apply bg-background text-foreground;
-  }
-
-  i,
-  address {
-    font-style: normal;
-  }
-}
-
-@layer utilities {
-  .debug {
-    @apply border border-red-500;
-  }
-
-  .debug-2 {
-    @apply border border-blue-500;
-  }
-
-  .debug-3 {
-    @apply border border-green-500;
-  }
-
-  .debug-4 {
-    @apply border border-orange-500;
-  }
-
-  .flex-center-center {
-    @apply flex items-center justify-center;
-  }
-
-  .flex-center-between {
-    @apply flex items-center justify-between;
-  }
-
-  .dim-4 {
-    @apply h-[4px] w-[4px];
-  }
-
-  .dim-8 {
-    @apply h-[8px] w-[8px];
-  }
-
-  .dim-16 {
-    @apply h-[16px] w-[16px];
-  }
-
-  .dim-24 {
-    @apply h-[24px] w-[24px];
-  }
-
-  .dim-32 {
-    @apply h-[32px] w-[32px];
-  }
-
-  .dim-48 {
-    @apply h-[48px] w-[48px];
-  }
-
-  .dim-64 {
-    @apply h-[64px] w-[64px];
-  }
-
-  .root-container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
-  }
-
-  .text-label-sm {
-    @apply font-medium text-[12px] leading-[16px] tracking-[0.5px]
-  }
-
-  .text-label-lg {
-    @apply font-medium text-[14px] leading-[20px] tracking-[0.1px]
-  }
-
-  .text-body-md {
-    @apply font-normal text-[14px] leading-[20px] tracking-[0.25px]
-  }
-
-  .text-body-lg {
-    @apply font-normal text-[16px] leading-[24px] tracking-[0.5px]
-  }
-
-  .text-title-sm {
-    @apply font-medium text-[14px] leading-[20px] tracking-[0.1px]
-  }
-
-  .text-title-md {
-    @apply font-medium text-[16px] leading-[24px] tracking-[0.15px]
-  }
-
-  .text-title-lg {
-    @apply font-normal text-[22px] leading-[28px] tracking-[0px]
-  }
 }

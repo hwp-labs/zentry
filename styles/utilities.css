@@ -1,0 +1,17 @@
+@layer utilities {
+  .debug {
+    @apply border border-red-500;
+  }
+
+  .debug-2 {
+    @apply border border-blue-500;
+  }
+
+  .debug-3 {
+    @apply border border-green-500;
+  }
+
+  .debug-4 {
+    @apply border border-orange-500;
+  }
+}

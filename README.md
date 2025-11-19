@@ -1,8 +1,8 @@
 <div align="center">
   <a href="https://zentry.vercel.app" target="_blank">
-    <img src="./public/logo.png" alt="" />
+    <img src="./public/logo.png" alt="" style="width:80px;" />
   </a>
-  <h1 style="margin:0;">ZEntry</h1>
+  <h1 style="margin:0;padding:0;">ZEntry</h1>
   <h2 style="">Internal Database Web App - Corel Ministry Int'l</h2>
 </div>
 
@@ -45,6 +45,8 @@ http://localhost:3000
 |  12 | Resources    | Download church resource materials, messages, publications, books, music, videos, etc.                                     |
 
 ## Screenshots
+
+> Coming soon
 
 ## Resources
 

@@ -1,0 +1,17 @@
+@layer components {
+  .root-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-fluid {
+    @apply mx-auto sm:max-w-[480px];
+  }
+
+  .flex-center-center {
+    @apply flex items-center justify-center;
+  }
+
+  .flex-center-between {
+    @apply flex items-center justify-between;
+  }
+}

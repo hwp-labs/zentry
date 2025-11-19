@@ -12,8 +12,8 @@ export const AppAvatar: React.FC<Props> = ({ src, text = NA, size = 32 }) => {
   //
   return (
     <Avatar style={{ width, height }}>
-      <AvatarImage src={src || AVATAR_URL} alt="" />
-      <AvatarFallback>{text.charAt(0).toUpperCase()}</AvatarFallback>
+      {src ? <AvatarImage src={src} alt="" /> : null}
+      <AvatarFallback className="text-title-md">{text.charAt(0).toUpperCase()}</AvatarFallback>
     </Avatar>
   );
 };
