@@ -15,6 +15,7 @@ import { Fab } from "@/components/organisms/fab";
 import { MemberModel } from "@/core/models/MemberModel";
 import { MemberPipe } from "@/core/pipes/MemberPipe";
 import membersSeeder from "@/core/seeders/members-seeder.json";
+import { CalendarDaysIcon, Calendar1Icon } from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -22,12 +23,21 @@ export default function HomePage() {
       <AppBar />
       <SearchBar />
       <FilterChips list={["All", "Favour", "Mercy", "Victory"]} />
-      <section className="mt-4 px-4">
-        <ListGroup title="Today" badgeVariant="destructive" badgeText={9}>
-          <ListContainer />
+      <section className="mt-4 h-[calc(100vh-200px)] overflow-y-scroll px-4">
+        <ListGroup
+          title="Today"
+          badgeVariant="destructive"
+          badgeText={3}
+          icon={<Calendar1Icon size={20} />}
+        >
+          <ListContainer
+            data={membersSeeder.slice(0, 3) as unknown as MemberModel[]}
+          />
         </ListGroup>
-        <ListGroup title="Upcoming" badgeText={15}>
-          <ListContainer />
+        <ListGroup title="Upcoming" badgeText={7} icon={<CalendarDaysIcon size={20}/>}>
+          <ListContainer
+            data={membersSeeder.slice(3) as unknown as MemberModel[]}
+          />
         </ListGroup>
       </section>
       <Fab variant="md" />
@@ -39,6 +49,7 @@ interface Props extends PropsWithChildren {
   title: string;
   badgeVariant?: "default" | "destructive" | "outline" | "secondary";
   badgeText?: string | number;
+  icon?: React.ReactNode;
 }
 
 const ListGroup: React.FC<Props> = ({
@@ -46,6 +57,7 @@ const ListGroup: React.FC<Props> = ({
   title,
   badgeVariant = "secondary",
   badgeText,
+  icon,
 }) => {
   return (
     <Accordion
@@ -55,9 +67,10 @@ const ListGroup: React.FC<Props> = ({
       className=""
     >
       <AccordionItem value="accordionItem1">
-        <AccordionTrigger className="py-0 pb-2">
-          <div className="flex items-center gap-2">
-            <Typography.Large>{title}</Typography.Large>
+        <AccordionTrigger className="p-0">
+          <div className="flex items-center gap-4">
+            {icon}
+            <p className="text-title-md">{title}</p>
             <Badge variant={badgeVariant}>{badgeText}</Badge>
           </div>
         </AccordionTrigger>
@@ -67,21 +80,25 @@ const ListGroup: React.FC<Props> = ({
   );
 };
 
-const ListContainer = () => {
+const ListContainer = ({ data = [] }: { data?: MemberModel[] }) => {
   return (
     <section className="">
-      {(membersSeeder as unknown as MemberModel[]).map((item, i) => {
+      {data.map((item, i) => {
         const Item = new MemberPipe(item);
         //
         return (
-          <div key={i} className="flex items-center gap-4 h-[72px]">
-            <AppAvatar src={item.avatarUrl} text={item.surname} size={40}/>
+          <div key={i} className="flex h-[72px] items-center gap-4">
+            <AppAvatar src={item.avatarUrl} text={item.surname} size={40} />
             <div className="flex-1">
               <div className="flex-center-between">
                 <p className="text-body-lg">{Item.DisplayName}</p>
-                <p className="text-label-sm text-muted-foreground">{Item.BirthDate}</p>
+                <p className="text-label-sm text-muted-foreground">
+                  {Item.BirthDate}
+                </p>
               </div>
-              <p className="text-body-md text-muted-foreground">{item.telephone1}</p>
+              <p className="text-body-md text-muted-foreground">
+                {item.telephone1}
+              </p>
             </div>
           </div>
         );

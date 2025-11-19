@@ -32,6 +32,7 @@ export const FilterChips: React.FC<Props> = ({
             variant={active ? "default" : "outline"}
             className={clsx(
               "h-[32px] rounded-[8px] transition-colors",
+              active && "bg-contrast",
               checked ? "gap-2 pr-4 pl-2" : "px-4",
             )}
           >

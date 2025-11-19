@@ -32,5 +32,124 @@
       "day": "02"
     },
     "status": "ACTIVE"
+  },
+  {
+    "surname": "Tugbeh",
+    "otherNames": "David Oluwatobi",
+    "gender": "MALE",
+    "birthDate": {
+      "month": 1,
+      "day": 1
+    },
+    "telephone1": "08169960927",
+    "occupation": "Software Engineer",
+    "maritalStatus": "SINGLE",
+    "anniversaryDate": {
+      "month": 1,
+      "day": 1
+    },
+    "status": "ACTIVE"
+  },
+  {
+    "surname": "Tugbeh",
+    "otherNames": "Ifeoluwa Oluwatosin",
+    "gender": "MALE",
+    "birthDate": {
+      "month": 3,
+      "day": 3
+    },
+    "telephone1": "08169960927",
+    "occupation": "Software Engineer",
+    "maritalStatus": "SINGLE",
+    "anniversaryDate": {
+      "month": 3,
+      "day": 3
+    },
+    "status": "ACTIVE"
+  },
+  {
+    "surname": "Tugbeh",
+    "otherNames": "Ayomide Oluwatoyin",
+    "gender": "MALE",
+    "birthDate": {
+      "month": 5,
+      "day": 5
+    },
+    "telephone1": "08169960927",
+    "occupation": "Software Engineer",
+    "maritalStatus": "SINGLE",
+    "anniversaryDate": {
+      "month": 5,
+      "day": 5
+    },
+    "status": "ACTIVE"
+  },
+  {
+    "surname": "Tugbeh",
+    "otherNames": "Olutayo Michael",
+    "gender": "MALE",
+    "birthDate": {
+      "month": 7,
+      "day": 7
+    },
+    "telephone1": "08169960927",
+    "occupation": "Software Engineer",
+    "maritalStatus": "SINGLE",
+    "anniversaryDate": {
+      "month": 7,
+      "day": 7
+    },
+    "status": "ACTIVE"
+  },
+  {
+    "surname": "Tugbeh",
+    "otherNames": "Ayomide Kehinde",
+    "gender": "MALE",
+    "birthDate": {
+      "month": 9,
+      "day": 9
+    },
+    "telephone1": "08169960927",
+    "occupation": "Software Engineer",
+    "maritalStatus": "SINGLE",
+    "anniversaryDate": {
+      "month": 9,
+      "day": 9
+    },
+    "status": "ACTIVE"
+  },
+  {
+    "surname": "Tugbeh",
+    "otherNames": "Sabiatu Oluwatobi",
+    "gender": "MALE",
+    "birthDate": {
+      "month": 11,
+      "day": 11
+    },
+    "telephone1": "08169960927",
+    "occupation": "Software Engineer",
+    "maritalStatus": "SINGLE",
+    "anniversaryDate": {
+      "month": 11,
+      "day": 11
+    },
+    "status": "ACTIVE"
+  },
+  {
+    "surname": "Tugbeh",
+    "otherNames": "Gbolahan Oluwatobiloba",
+    "gender": "MALE",
+    "birthDate": {
+      "month": 1,
+      "day": 1
+    },
+    "telephone1": "08169960927",
+    "occupation": "Software Engineer",
+    "maritalStatus": "SINGLE",
+    "anniversaryDate": {
+      "month": 1,
+      "day": 1
+    },
+    "status": "ACTIVE"
   }
 ]
