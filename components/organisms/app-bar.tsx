@@ -12,9 +12,7 @@ export const AppBar = () => {
           <AppAvatar src={LOGO_URL} text="U" />
           <Typography.H2 c="white">{APP.name}</Typography.H2>
         </figure>
-        <Clickable>
-          <AppAvatar src={"/images/my-avatar.png"} text="U" />
-        </Clickable>
+        <AppAvatar src={"/images/my-avatar.png"} text="U" />
       </div>
     </header>
   );

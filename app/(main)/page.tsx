@@ -6,7 +6,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/shadcn/ui/accordion";
-import { Typography } from "@/components/atoms/typography";
 import { AppAvatar } from "@/components/atoms/app-avatar";
 import { AppBar } from "@/components/organisms/app-bar";
 import { SearchBar } from "@/components/organisms/search-bar";
@@ -15,7 +14,7 @@ import { Fab } from "@/components/organisms/fab";
 import { MemberModel } from "@/core/models/MemberModel";
 import { MemberPipe } from "@/core/pipes/MemberPipe";
 import membersSeeder from "@/core/seeders/members-seeder.json";
-import { CalendarDaysIcon, Calendar1Icon } from "lucide-react";
+import { CalendarDaysIcon, Calendar1Icon, HomeIcon, PhoneIcon, SmartphoneIcon } from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -34,10 +33,21 @@ export default function HomePage() {
             data={membersSeeder.slice(0, 3) as unknown as MemberModel[]}
           />
         </ListGroup>
-        <ListGroup title="Upcoming" badgeText={7} icon={<CalendarDaysIcon size={20}/>}>
+        <ListGroup
+          title="Upcoming"
+          badgeText={7}
+          icon={<CalendarDaysIcon size={20} />}
+        >
           <ListContainer
             data={membersSeeder.slice(3) as unknown as MemberModel[]}
           />
+        </ListGroup>
+        <ListGroup
+          title="This month"
+          badgeText={10}
+          icon={<CalendarDaysIcon size={20} />}
+        >
+          <ListContainer data={membersSeeder as unknown as MemberModel[]} />
         </ListGroup>
       </section>
       <Fab variant="sm" />
@@ -67,7 +77,7 @@ const ListGroup: React.FC<Props> = ({
       className=""
     >
       <AccordionItem value="accordionItem1">
-        <AccordionTrigger className="p-0">
+        <AccordionTrigger className="_debug-2 pt-0">
           <div className="flex items-center gap-2.5">
             {icon}
             <p className="text-title-md">{title}</p>
@@ -96,8 +106,11 @@ const ListContainer = ({ data = [] }: { data?: MemberModel[] }) => {
                   {Item.BirthDate}
                 </p>
               </div>
-              <p className="text-body-md text-muted-foreground">
+              <p className="text-body-md text-muted-foreground flex items-center gap-2.5">
+                <PhoneIcon size={16} />
                 {item.telephone1}
+                <HomeIcon size={16} />
+                Favor
               </p>
             </div>
           </div>

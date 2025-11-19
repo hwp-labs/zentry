@@ -4,7 +4,7 @@ import { Clickable } from "@/components/atoms/clickable";
 
 export const SearchBar: React.FC = () => {
   return (
-    <section className="flex-center-between m-4 h-[56px] gap-4 rounded-full border bg-gray-50 px-4">
+    <section className="flex-center-between m-4 h-[56px] gap-4 rounded-full border bg-gray-50 px-2.5">
       <Input
         type="search"
         placeholder="Search name, telephone"

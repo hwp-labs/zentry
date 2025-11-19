@@ -4,15 +4,15 @@
     "otherNames": "Emmanuel Osaretin",
     "gender": "MALE",
     "birthDate": {
-      "month": "09",
-      "day": "15"
+      "month": 9,
+      "day": 15
     },
     "telephone1": "08169960927",
     "occupation": "Software Engineer",
     "maritalStatus": "MARRIED",
     "anniversaryDate": {
-      "month": 9,
-      "day": 15
+      "month": 12,
+      "day": 2
     },
     "status": "ACTIVE"
   },
@@ -28,8 +28,8 @@
     "occupation": "Fashion Designer",
     "maritalStatus": "MARRIED",
     "anniversaryDate": {
-      "month": "12",
-      "day": "02"
+      "month": 12,
+      "day": 2
     },
     "status": "ACTIVE"
   },
