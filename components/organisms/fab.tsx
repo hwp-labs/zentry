@@ -12,7 +12,7 @@ export const Fab: React.FC<Props> = ({ variant = "sm" }) => {
   return (
     <div
       className={clsx(
-        "flex-center-center bg-brand fixed right-4 bottom-4 shadow",
+        "flex-center-center bg-brand fixed right-4 bottom-4 shadow-lg",
         variant === "sm" && "size-[56px] rounded-[16px]",
         variant === "md" && "size-[80px] rounded-[20px]",
         variant === "lg" && "size-[96px] rounded-[28px]",

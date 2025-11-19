@@ -1,6 +1,6 @@
 import { BaseModel } from "../models/common/BaseModel";
 import { dateUtil } from "@/utils/date.util";
-import { NA } from "@/constants/STRINGS";
+import { NA } from "@/constants/LANG";
 
 export class BasePipe {
   constructor(public __: BaseModel) { }

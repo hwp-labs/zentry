@@ -3,7 +3,7 @@ import { MemberModel } from "../models/MemberModel";
 import { DateValueObject } from "../value-objects/DateValueObject";
 import { BasePipe } from "./BasePipe";
 import { dateUtil } from "@/utils/date.util";
-import { NA } from "@/constants/STRINGS";
+import { NA } from "@/constants/LANG";
 
 export class MemberPipe extends BasePipe {
   constructor(public __: MemberModel) {

@@ -7,7 +7,7 @@ export const COLOR = {
   offBlack: '#0a0a0a',
   // 
   brand: "#7a296c",
-  contrast: "#297937",
+  contrast: "#3a418f",
   accentGold: "#d2af6d",
   accentBlue: "#3a418f",
   accentPink: "#F472B6",
