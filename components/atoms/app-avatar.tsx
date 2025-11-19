@@ -1,5 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from "../shadcn/ui/avatar";
-import { AVATAR_URL, NA } from "@/constants/LANG";
+import { NA } from "@/constants/LANG";
 
 interface Props {
   src?: string | null;
