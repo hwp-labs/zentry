@@ -46,10 +46,6 @@ export const AddMemberFormSheet: React.FC<Props> = ({ open, onChange }) => {
           </SheetDescription>
         </SheetHeader>
         <section className="grid h-[calc(100vh-200px)] flex-1 auto-rows-min gap-6 overflow-y-scroll px-4">
-          <div className="grid gap-3">
-            <Label htmlFor="sheet-demo-name">avatarUrl</Label>
-            <Input id="sheet-demo-name" defaultValue="Pedro Duarte" />
-          </div>
           <SelectInput
             name="title"
             label="Title"
