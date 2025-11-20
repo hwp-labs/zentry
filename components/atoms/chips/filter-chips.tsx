@@ -5,30 +5,31 @@
 import clsx from "clsx";
 import { Badge } from "@/components/shadcn/ui/badge";
 import { IconCheck } from "@tabler/icons-react";
+import { SelectorProps } from "@/types/common.type";
 
-interface Props {
-  list?: string[];
-  selected?: number | number[];
-  onChange?: (value: number) => void;
+interface Props extends SelectorProps {
 }
 
 export const FilterChips: React.FC<Props> = ({
-  list = [],
-  selected = 0,
+  value,
+  values = [],
   onChange = () => undefined,
+  data = [],
 }) => {
-  const multiple = typeof selected !== "number";
-  //
   return (
     <section className="flex items-center gap-2.5 overflow-x-auto px-4 pb-2">
-      {list.map((item, i) => {
-        const active = multiple ? selected.includes(i) : i === selected;
-        const checked = multiple && active;
+      {data.map((item) => {
+        const active = values
+          ? values.includes(item.value)
+          : value
+            ? value === item.value
+            : false;
+        const checked = values && active;
         //
         return (
           <Badge
-            key={i}
-            onClick={() => onChange(i)}
+            key={item.value}
+            onClick={() => onChange(item.value, item)}
             variant={active ? "default" : "outline"}
             className={clsx(
               "h-[32px] rounded-[8px] transition-colors",
@@ -37,7 +38,7 @@ export const FilterChips: React.FC<Props> = ({
             )}
           >
             {checked && <IconCheck size={18} />}
-            <p className="text-label-lg">{item}</p>
+            <p className="text-label-lg">{item.label}</p>
           </Badge>
         );
       })}

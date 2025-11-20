@@ -10,14 +10,16 @@ export interface MemberModel extends AuditableModel {
   surname: string;
   otherNames: string;
   gender?: GenderEnum | null;
+  ageRange?: AgeRangeEnum | null;
   birthDate?: DateValueObject | null;
+  maritalStatus?: MaritalStatusEnum | null;
+  anniversaryDate?: DateValueObject | null;
   email?: string;
   telephone1: string;
   telephone2?: string;
-  address?: AddressValueObject | null;
+  homeAddress?: AddressValueObject | null;
+  officeAddress?: AddressValueObject | null;
   occupation?: string;
-  maritalStatus?: MaritalStatusEnum | null;
-  anniversaryDate?: DateValueObject | null;
   status: MemberStatusEnum;
 }
 
@@ -50,6 +52,13 @@ export enum GenderEnum {
   MALE = 'Male',
   FEMALE = 'Female',
   OTHER = 'Other'
+}
+
+export enum AgeRangeEnum {
+  AGE_13_17 = '13 - 17',
+  AGE_18_29 = '18 -29',
+  AGE_30_39 = '30 -39',
+  AGE_40_ABOVE = '40 above'
 }
 
 export enum MaritalStatusEnum {

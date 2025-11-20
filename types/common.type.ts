@@ -1,6 +1,20 @@
-export type ListType<T extends string | number = string> = T[]
+export type ListType = string[]
 
-export type RecordType<T extends string | number = string> = Record<T, unknown>
+export type SeriesType = number[]
+
+export type DateType = Date | null
+
+export type DateStringType = Date | string | null
+
+export type FileType = File | null
+
+export type FileBlobType = File | Blob | null
+
+export type RecordType<T = unknown> = Record<string, T>
+
+export type EnumType = Record<string, string | number>
+
+export type NormalizedRecordType<T = unknown> = Record<number, T>
 
 export type OptionType<T = RecordType> = {
   value: string,
@@ -9,8 +23,19 @@ export type OptionType<T = RecordType> = {
   item?: T,
 }
 
+export type OptionListType = OptionType[]
+
 export type CollectionType<T = RecordType> = T[]
 
-export type DateType = Date | null
+export type ModelType = {
+  id?: number | string;
+  name?: string;
+  title?: string;
+}
 
-export type DateStrType = Date | string | null
+export interface SelectorProps {
+  value?: string;
+  values?: ListType;
+  onChange?: (value: string, option?: unknown) => void;
+  data?: OptionListType;
+}

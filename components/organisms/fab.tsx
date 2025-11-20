@@ -1,16 +1,20 @@
+"use client";
+
 import clsx from "clsx";
-import { COLOR } from "@/constants/COLOR";
 import { PlusIcon } from "lucide-react";
+import { COLOR } from "@/constants/COLOR";
 
 interface Props {
   variant?: "sm" | "md" | "lg";
+  onClick?: VoidFunction;
 }
 
-export const Fab: React.FC<Props> = ({ variant = "sm" }) => {
+export const Fab: React.FC<Props> = ({ variant = "sm", onClick }) => {
   const iconSize = { sm: 24, md: 28, lg: 36 }[variant];
   //
   return (
     <div
+      onClick={onClick}
       className={clsx(
         "flex-center-center bg-brand fixed right-4 bottom-4 shadow-lg",
         variant === "sm" && "size-[56px] rounded-[16px]",
