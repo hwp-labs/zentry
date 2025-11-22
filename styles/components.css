@@ -30,4 +30,8 @@
   .flex-center-end {
     @apply flex items-center justify-end;
   }
+
+  .flex-start-between {
+    @apply flex items-start justify-between;
+  }
 }

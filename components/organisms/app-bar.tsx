@@ -5,8 +5,9 @@ import {
   EllipsisVerticalIcon,
   LogInIcon,
   BugIcon,
+  LogOutIcon,
 } from "lucide-react";
-// 
+//
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -51,11 +52,29 @@ export const AppBar: React.FC<Props> = ({ children, title }) => {
 
         {/* RIGHT */}
         {title ? (
-        <div className="flex items-center gap-4">
-          {children}
+          <div className="flex items-center gap-4">
+            {children}
+            <DropdownMenu>
+              <DropdownMenuTrigger className="m-0 p-0">
+                <EllipsisVerticalIcon size={24} color={COLOR.white} />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="mt-4 w-[160px]" align="end">
+                <DropdownMenuItem className="text-label-lg h-[48px] gap-2">
+                  <BugIcon size={24} />
+                  Tech Support
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem className="text-label-lg h-[48px] gap-2">
+                  <LogInIcon size={24} />
+                  Sign in
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
+        ) : (
           <DropdownMenu>
             <DropdownMenuTrigger className="m-0 p-0">
-              <EllipsisVerticalIcon size={24} color={COLOR.white} />
+              <AppAvatar src={"/images/my-avatar.png"} alt="U" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="mt-4 w-[160px]" align="end">
               <DropdownMenuItem className="text-label-lg h-[48px] gap-2">
@@ -64,14 +83,11 @@ export const AppBar: React.FC<Props> = ({ children, title }) => {
               </DropdownMenuItem>
               <DropdownMenuSeparator />
               <DropdownMenuItem className="text-label-lg h-[48px] gap-2">
-                <LogInIcon size={24} />
-                Sign in
+                <LogOutIcon size={24} />
+                Logout
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-        </div>
-        ) : (
-          <AppAvatar src={"/images/my-avatar.png"} alt="U" />
         )}
       </div>
     </header>

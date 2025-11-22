@@ -1,6 +1,6 @@
 "use client";
 
-// DOC: https://m3.material.io/components/chips/specs
+// DOCS: https://m3.material.io/components/chips/specs
 
 import clsx from "clsx";
 import { ChevronDownIcon, CheckIcon, FunnelXIcon } from "lucide-react";

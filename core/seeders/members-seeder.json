@@ -2,154 +2,273 @@
   {
     "surname": "Tugbeh",
     "otherNames": "Emmanuel Osaretin",
-    "gender": "MALE",
+    "gender": "Male",
     "birthDate": {
       "month": 9,
       "day": 15
     },
     "telephone1": "08169960927",
     "occupation": "Software Engineer",
-    "maritalStatus": "MARRIED",
+    "maritalStatus": "Married",
     "anniversaryDate": {
       "month": 12,
       "day": 2
     },
-    "status": "ACTIVE"
+    "status": "Active"
   },
   {
     "surname": "Tugbeh",
     "otherNames": "Sandra Ehiaghe",
-    "gender": "FEMALE",
+    "gender": "Female",
     "birthDate": {
       "month": 11,
       "day": 15
     },
     "telephone1": "07066157335",
     "occupation": "Fashion Designer",
-    "maritalStatus": "MARRIED",
+    "maritalStatus": "Married",
     "anniversaryDate": {
       "month": 12,
       "day": 2
     },
-    "status": "ACTIVE"
+    "status": "Active"
   },
   {
-    "surname": "Tugbeh",
-    "otherNames": "David Oluwatobi",
-    "gender": "MALE",
+    "surname": "Okonkwo",
+    "otherNames": "Ngozi Patricia",
+    "gender": "Female",
     "birthDate": {
-      "month": 1,
-      "day": 1
+      "month": 5,
+      "day": 20
     },
-    "telephone1": "08169960927",
-    "occupation": "Software Engineer",
-    "maritalStatus": "SINGLE",
+    "telephone1": "08187654321",
+    "occupation": "Lawyer",
+    "maritalStatus": "Married",
     "anniversaryDate": {
-      "month": 1,
-      "day": 1
+      "month": 10,
+      "day": 8
     },
-    "status": "ACTIVE"
+    "status": "Active"
   },
   {
-    "surname": "Tugbeh",
-    "otherNames": "Ifeoluwa Oluwatosin",
-    "gender": "MALE",
+    "surname": "Adeleke",
+    "otherNames": "Oluwaseun Michael",
+    "gender": "Male",
     "birthDate": {
+      "month": 8,
+      "day": 30
+    },
+    "telephone1": "09012345678",
+    "occupation": "Business Analyst",
+    "maritalStatus": "Single",
+    "anniversaryDate": {
       "month": 3,
       "day": 3
     },
-    "telephone1": "08169960927",
-    "occupation": "Software Engineer",
-    "maritalStatus": "SINGLE",
+    "status": "Active"
+  },
+  {
+    "surname": "Akinola",
+    "otherNames": "Temitope Ruth",
+    "gender": "Female",
+    "birthDate": {
+      "month": 11,
+      "day": 28
+    },
+    "telephone1": "07023456789",
+    "occupation": "Marketing Manager",
+    "maritalStatus": "Single",
     "anniversaryDate": {
+      "month": 5,
+      "day": 5
+    },
+    "status": "Active"
+  },
+  {
+    "surname": "Okoro",
+    "otherNames": "Chinedu Emmanuel",
+    "gender": "Male",
+    "birthDate": {
+      "month": 10,
+      "day": 16
+    },
+    "telephone1": "08134567890",
+    "occupation": "Data Scientist",
+    "maritalStatus": "Married",
+    "anniversaryDate": {
+      "month": 6,
+      "day": 25
+    },
+    "status": "Active"
+  },
+  {
+    "surname": "Mensah",
+    "otherNames": "Abena Joyce",
+    "gender": "Female",
+    "birthDate": {
+      "month": 4,
+      "day": 7
+    },
+    "telephone1": "07056789012",
+    "occupation": "HR Manager",
+    "maritalStatus": "Single",
+    "anniversaryDate": {
+      "month": 9,
+      "day": 9
+    },
+    "status": "Active"
+  },
+  {
+    "surname": "Yusuf",
+    "otherNames": "Maryam Zainab",
+    "gender": "Female",
+    "birthDate": {
+      "month": 1,
+      "day": 19
+    },
+    "telephone1": "08167890123",
+    "occupation": "Graphic Designer",
+    "maritalStatus": "Married",
+    "anniversaryDate": {
+      "month": 9,
+      "day": 12
+    },
+    "status": "Active"
+  },
+  {
+    "surname": "Udoh",
+    "otherNames": "Samuel Etim",
+    "gender": "Male",
+    "birthDate": {
+      "month": 6,
+      "day": 11
+    },
+    "telephone1": "09078901234",
+    "occupation": "Project Manager",
+    "maritalStatus": "Single",
+    "anniversaryDate": {
+      "month": 1,
+      "day": 1
+    },
+    "status": "Active"
+  },
+  {
+    "surname": "Okafor",
+    "otherNames": "Chidinma Grace",
+    "gender": "Female",
+    "birthDate": {
       "month": 3,
-      "day": 3
+      "day": 12
     },
-    "status": "ACTIVE"
-  },
-  {
-    "surname": "Tugbeh",
-    "otherNames": "Ayomide Oluwatoyin",
-    "gender": "MALE",
-    "birthDate": {
-      "month": 5,
-      "day": 5
-    },
-    "telephone1": "08169960927",
-    "occupation": "Software Engineer",
-    "maritalStatus": "SINGLE",
-    "anniversaryDate": {
-      "month": 5,
-      "day": 5
-    },
-    "status": "ACTIVE"
-  },
-  {
-    "surname": "Tugbeh",
-    "otherNames": "Olutayo Michael",
-    "gender": "MALE",
-    "birthDate": {
-      "month": 7,
-      "day": 7
-    },
-    "telephone1": "08169960927",
-    "occupation": "Software Engineer",
-    "maritalStatus": "SINGLE",
-    "anniversaryDate": {
-      "month": 7,
-      "day": 7
-    },
-    "status": "ACTIVE"
-  },
-  {
-    "surname": "Tugbeh",
-    "otherNames": "Ayomide Kehinde",
-    "gender": "MALE",
-    "birthDate": {
-      "month": 9,
-      "day": 9
-    },
-    "telephone1": "08169960927",
-    "occupation": "Software Engineer",
-    "maritalStatus": "SINGLE",
-    "anniversaryDate": {
-      "month": 9,
-      "day": 9
-    },
-    "status": "ACTIVE"
-  },
-  {
-    "surname": "Tugbeh",
-    "otherNames": "Sabiatu Oluwatobi",
-    "gender": "MALE",
-    "birthDate": {
-      "month": 11,
-      "day": 11
-    },
-    "telephone1": "08169960927",
-    "occupation": "Software Engineer",
-    "maritalStatus": "SINGLE",
-    "anniversaryDate": {
-      "month": 11,
-      "day": 11
-    },
-    "status": "ACTIVE"
-  },
-  {
-    "surname": "Tugbeh",
-    "otherNames": "Gbolahan Oluwatobiloba",
-    "gender": "MALE",
-    "birthDate": {
-      "month": 1,
-      "day": 1
-    },
-    "telephone1": "08169960927",
-    "occupation": "Software Engineer",
-    "maritalStatus": "SINGLE",
+    "telephone1": "08123456789",
+    "occupation": "Medical Doctor",
+    "maritalStatus": "Single",
     "anniversaryDate": {
       "month": 1,
       "day": 1
     },
-    "status": "ACTIVE"
+    "status": "Active"
+  },
+  {
+    "surname": "Adeyemi",
+    "otherNames": "Babatunde Joshua",
+    "gender": "Male",
+    "birthDate": {
+      "month": 6,
+      "day": 22
+    },
+    "telephone1": "08098765432",
+    "occupation": "Architect",
+    "maritalStatus": "Married",
+    "anniversaryDate": {
+      "month": 8,
+      "day": 14
+    },
+    "status": "Active"
+  },
+  {
+    "surname": "Williams",
+    "otherNames": "Blessing Chiamaka",
+    "gender": "Female",
+    "birthDate": {
+      "month": 9,
+      "day": 8
+    },
+    "telephone1": "07034567890",
+    "occupation": "Teacher",
+    "maritalStatus": "Single",
+    "anniversaryDate": {
+      "month": 5,
+      "day": 5
+    },
+    "status": "Active"
+  },
+  {
+    "surname": "Eze",
+    "otherNames": "Chukwuemeka Daniel",
+    "gender": "Male",
+    "birthDate": {
+      "month": 4,
+      "day": 18
+    },
+    "telephone1": "08145678901",
+    "occupation": "Accountant",
+    "maritalStatus": "Married",
+    "anniversaryDate": {
+      "month": 11,
+      "day": 20
+    },
+    "status": "Active"
+  },
+  {
+    "surname": "Balogun",
+    "otherNames": "Folake Esther",
+    "gender": "Female",
+    "birthDate": {
+      "month": 12,
+      "day": 5
+    },
+    "telephone1": "09087654321",
+    "occupation": "Nurse",
+    "maritalStatus": "Single",
+    "anniversaryDate": {
+      "month": 9,
+      "day": 9
+    },
+    "status": "Active"
+  },
+  {
+    "surname": "Ibrahim",
+    "otherNames": "Fatima Aisha",
+    "gender": "Female",
+    "birthDate": {
+      "month": 7,
+      "day": 25
+    },
+    "telephone1": "08156789012",
+    "occupation": "Pharmacist",
+    "maritalStatus": "Married",
+    "anniversaryDate": {
+      "month": 5,
+      "day": 16
+    },
+    "status": "Active"
+  },
+  {
+    "surname": "Nwosu",
+    "otherNames": "Ikechukwu Peter",
+    "gender": "Male",
+    "birthDate": {
+      "month": 2,
+      "day": 14
+    },
+    "telephone1": "07045678123",
+    "occupation": "Civil Engineer",
+    "maritalStatus": "Single",
+    "anniversaryDate": {
+      "month": 1,
+      "day": 1
+    },
+    "status": "Active"
   }
 ]

@@ -16,7 +16,7 @@ export class MemberPipe extends BasePipe {
 
   get DisplayName() {
     return this.__.title ?
-      startCase(`${this.__.title} ${this.__.surname} ${this.__.otherNames}`) :
+      startCase(`${this.__.surname} ${this.__.otherNames} (${this.__.title})`) :
       startCase(`${this.__.surname} ${this.__.otherNames}`);
   }
 
@@ -25,7 +25,7 @@ export class MemberPipe extends BasePipe {
     const day = this.__.birthDate.day
     const month = this.__.birthDate.month
     const dateVO = new DateValueObject(day, month).toString()
-    return dateUtil.shortDate(dateVO);
+    return dateUtil.birthDate(dateVO);
   }
 
   get Anniversary() {
@@ -33,6 +33,6 @@ export class MemberPipe extends BasePipe {
     const day = this.__.anniversaryDate.day
     const month = this.__.anniversaryDate.month
     const dateVO = new DateValueObject(day, month).toString()
-    return dateUtil.shortDate(dateVO);
+    return dateUtil.birthDate(dateVO);
   }
 }

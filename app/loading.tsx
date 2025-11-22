@@ -1,11 +1,16 @@
-import { Logo } from "@/components/atoms/logo";
-import { APP } from "@/constants/APP";
+import Image from "next/image";
 
 export default function RootLoading() {
   return (
-    <main className="flex flex-col h-screen w-full items-center justify-center gap-4">
-      <Logo size="lg" />
-      <h1 className="text-2xl font-bold">{APP.title}</h1>
+    <main className="flex-center-center h-screen w-full">
+      <Image
+        src="/logo.png"
+        alt="Loading..."
+        width={120}
+        height={120}
+        className="animate-pulse"
+        priority
+      />
     </main>
   );
 }

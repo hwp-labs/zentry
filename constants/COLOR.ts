@@ -1,3 +1,5 @@
+// DOCS: https://hexcolorpedia.com/color/?q=7a296c
+
 export type ColorType = keyof typeof COLOR;
 
 export const COLOR = {
@@ -7,6 +9,8 @@ export const COLOR = {
   offBlack: '#0a0a0a',
   // 
   brand: "#7a296c",
+  brand10: "#f2eaf0",
+  brand20: "#e4d4e2",
   contrast: "#3a418f",
   accentGold: "#d2af6d",
   accentBlue: "#3a418f",

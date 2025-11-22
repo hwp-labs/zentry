@@ -1,4 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from "../shadcn/ui/avatar";
+import { COLOR } from "@/constants/COLOR";
 import { NA } from "@/constants/LANG";
 
 interface Props {
@@ -11,9 +12,14 @@ export const AppAvatar: React.FC<Props> = ({ src, alt = NA, size = 32 }) => {
   const [width, height] = [size, size];
   //
   return (
-    <Avatar style={{ width, height }}>
+    <Avatar
+      className="border"
+      style={{ width, height, background: COLOR.brand20 }}
+    >
       {src ? <AvatarImage src={src} alt="" /> : null}
-      <AvatarFallback className="text-title-md">{alt.charAt(0).toUpperCase()}</AvatarFallback>
+      <AvatarFallback className="text-title-md">
+        {alt.charAt(0).toUpperCase()}
+      </AvatarFallback>
     </Avatar>
   );
 };
