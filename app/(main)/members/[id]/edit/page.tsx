@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { CheckIcon } from "lucide-react";
+import { CheckIcon, PhoneOutgoingIcon } from "lucide-react";
 import { Button } from "@/components/shadcn/ui/button";
 import { AppBar } from "@/components/organisms/app-bar";
 import { FormBuilder } from "@/components/molecules/form-builder";
@@ -23,6 +23,7 @@ import { DAYS_IN_MONTH, MONTHS } from "@/constants/LANG";
 import { AvatarUploader } from "@/components/atoms/avatar-uploader";
 import { FieldSeparator } from "@/components/shadcn/ui/field";
 import { PATH } from "@/constants/PATH";
+import { COLOR } from "@/constants/COLOR";
 
 export default function EditMemberPage() {
   const router = useRouter();
@@ -36,7 +37,9 @@ export default function EditMemberPage() {
   //
   return (
     <>
-      <AppBar title="Edit member" />
+      <AppBar title="Edit member">
+        <PhoneOutgoingIcon size={20} color={COLOR.white} />
+      </AppBar>
       <div className="container-fluid mt-4">
         <main className="scroll-view">
           <FormBuilder.Root

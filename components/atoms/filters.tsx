@@ -3,7 +3,7 @@
 // DOC: https://m3.material.io/components/chips/specs
 
 import clsx from "clsx";
-import { ChevronDownIcon, CheckIcon } from "lucide-react";
+import { ChevronDownIcon, CheckIcon, FunnelXIcon } from "lucide-react";
 import { Badge } from "@/components/shadcn/ui/badge";
 import { SelectorProps } from "@/types/common.type";
 
@@ -53,10 +53,18 @@ export const Filter: React.FC<FilterProps> = ({ label }) => {
   return (
     <Badge
       variant={"outline"}
-      className="h-[32px] rounded-[8px] transition-colors gap-2 pl-3"
+      className="h-[32px] gap-2 rounded-[8px] pl-3 transition-colors"
     >
       <p className="text-label-lg">{label}</p>
-      <ChevronDownIcon size={18}/>
+      <ChevronDownIcon size={18} />
     </Badge>
+  );
+};
+
+export const FilterReset: React.FC = () => {
+  return (
+    <div className="border rounded-[8px] flex-center-center h-[32px] w-[32px] px-2">
+      <FunnelXIcon size={20} className="text-destructive" />
+    </div>
   );
 };

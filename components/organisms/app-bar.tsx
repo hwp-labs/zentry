@@ -1,44 +1,28 @@
+import { PropsWithChildren } from "react";
 import { useRouter } from "next/navigation";
 import {
-  ChevronLeftIcon,
   ArrowLeftIcon,
   EllipsisVerticalIcon,
-  LayoutGridIcon,
-  PhoneCallIcon,
-  PhoneIcon,
-  SettingsIcon,
-  BotMessageSquareIcon,
-  InfoIcon,
-  LifeBuoyIcon,
-  Settings2Icon,
   LogInIcon,
-  RssIcon,
   BugIcon,
 } from "lucide-react";
-import { Button } from "../shadcn/ui/button";
+// 
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuGroup,
   DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuPortal,
   DropdownMenuSeparator,
-  DropdownMenuShortcut,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "../shadcn/ui/dropdown-menu";
 import { AppAvatar } from "../atoms/app-avatar";
 import { APP } from "@/constants/APP";
 import { COLOR } from "@/constants/COLOR";
 
-interface Props {
+interface Props extends PropsWithChildren {
   title?: string;
 }
 
-export const AppBar: React.FC<Props> = ({ title }) => {
+export const AppBar: React.FC<Props> = ({ children, title }) => {
   const router = useRouter();
   //
   return (
@@ -67,22 +51,25 @@ export const AppBar: React.FC<Props> = ({ title }) => {
 
         {/* RIGHT */}
         {title ? (
+        <div className="flex items-center gap-4">
+          {children}
           <DropdownMenu>
             <DropdownMenuTrigger className="m-0 p-0">
               <EllipsisVerticalIcon size={24} color={COLOR.white} />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="mt-4 w-[160px]" align="end">
-              <DropdownMenuItem className="h-[48px] gap-2 text-label-lg">
+              <DropdownMenuItem className="text-label-lg h-[48px] gap-2">
                 <BugIcon size={24} />
                 Tech Support
               </DropdownMenuItem>
               <DropdownMenuSeparator />
-              <DropdownMenuItem className="h-[48px] gap-2 text-label-lg">
+              <DropdownMenuItem className="text-label-lg h-[48px] gap-2">
                 <LogInIcon size={24} />
                 Sign in
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
+        </div>
         ) : (
           <AppAvatar src={"/images/my-avatar.png"} alt="U" />
         )}

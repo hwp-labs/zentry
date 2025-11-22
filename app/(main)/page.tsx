@@ -22,9 +22,10 @@ export default function HomePage() {
   return (
     <>
       <AppBar />
-      <div className="container-fluid pt-6 grid gap-6">
+      {/*  */}
+      <div className="container-fluid grid gap-6 pt-6">
         <SearchBar />
-
+        {/*  */}
         <Filters
           value="0"
           data={selectorUtil.fromList([
@@ -35,7 +36,7 @@ export default function HomePage() {
             "Men",
           ])}
         />
-
+        {/*  */}
         <main className="scroll-view">
           <ListAccordion
             title="Today"
@@ -65,6 +66,7 @@ export default function HomePage() {
           </ListAccordion>
         </main>
       </div>
+      {/*  */}
       <Fab onClick={gotoAddMemberPage} />
     </>
   );

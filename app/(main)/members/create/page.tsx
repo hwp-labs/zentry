@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { CheckIcon } from "lucide-react";
+import { CheckIcon, PhoneOutgoingIcon } from "lucide-react";
+// 
 import { Button } from "@/components/shadcn/ui/button";
 import { AppBar } from "@/components/organisms/app-bar";
 import { FormBuilder } from "@/components/molecules/form-builder";
@@ -23,6 +24,7 @@ import { DAYS_IN_MONTH, MONTHS } from "@/constants/LANG";
 import { AvatarUploader } from "@/components/atoms/avatar-uploader";
 import { FieldSeparator } from "@/components/shadcn/ui/field";
 import { PATH } from "@/constants/PATH";
+import { COLOR } from "@/constants/COLOR";
 
 export default function CreateMemberPage() {
   const router = useRouter();
@@ -36,7 +38,9 @@ export default function CreateMemberPage() {
   //
   return (
     <>
-      <AppBar title="Add member" />
+      <AppBar title="Add member">
+        <PhoneOutgoingIcon size={20} color={COLOR.white} />
+      </AppBar>
       <div className="container-fluid mt-4">
         <main className="scroll-view">
           <FormBuilder.Root
@@ -156,11 +160,7 @@ export default function CreateMemberPage() {
               label="Church Department"
               data={selectorUtil.fromEnum(DepartmentEnum)}
             />
-            <TextInput
-              type="date"
-              name="dateCaptured"
-              label="Date Joined"
-            />
+            <TextInput type="date" name="dateCaptured" label="Date Joined" />
           </FormBuilder.Root>
         </main>
         <footer className="flex-center-between content-fluid fixed bottom-0 flex gap-4 border-t bg-white p-4">
