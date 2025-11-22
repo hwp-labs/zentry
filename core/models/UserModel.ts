@@ -1,5 +1,6 @@
 import { BaseModel } from "./common/BaseModel";
 import { DeviceValueObject } from "../value-objects/DeviceValueObject";
+import { AccountStatusEnum } from "../enums/CommonEnum";
 
 export interface UserModel extends BaseModel {
   avatarUrl?: string;
@@ -9,12 +10,7 @@ export interface UserModel extends BaseModel {
   password: string;
   role: UserRoleEnum;
   device?: DeviceValueObject;
-  status: UserStatusEnum;
-}
-
-export enum UserStatusEnum {
-  ACTIVE = 'Active',
-  SUSPENDED = 'Suspended',
+  status: AccountStatusEnum;
 }
 
 export enum UserRoleEnum {

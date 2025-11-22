@@ -13,10 +13,7 @@ import {
 import { Label } from "@/components/shadcn/ui/label";
 import { Input } from "@/components/shadcn/ui/input";
 import { Button } from "@/components/shadcn/ui/button";
-import {
-  TextInput,
-  TextInputV2,
-} from "@/components/molecules/form-builder/ui/text-input";
+import { TextInput } from "@/components/molecules/form-builder/ui/text-input";
 import { SelectInput } from "@/components/molecules/form-builder/ui/select-input";
 import {
   AgeRangeEnum,
@@ -29,6 +26,7 @@ import { GroupEnum } from "@/core/enums/GroupEnum";
 import { DepartmentEnum } from "@/core/enums/DepartmentEnum";
 import { selectorUtil } from "@/utils/selector.util";
 import { DAYS_IN_MONTH, MONTHS } from "@/constants/LANG";
+import { AppAvatar } from "@/components/atoms/app-avatar";
 
 interface Props {
   open: boolean;
@@ -45,19 +43,20 @@ export const AddMemberFormSheet: React.FC<Props> = ({ open, onChange }) => {
             Corel Ministry (A.K.A Jubilee Chapel HQ) Guest Bio Data Form
           </SheetDescription>
         </SheetHeader>
-        <section className="grid h-[calc(100vh-200px)] flex-1 auto-rows-min gap-6 overflow-y-scroll px-4">
+        <section className="scroll-view grid flex-1 auto-rows-min gap-6">
+          <AppAvatar size={128} src={null} text="E" />
           <SelectInput
             name="title"
             label="Title"
             data={selectorUtil.fromEnum(TitleEnum)}
           />
           <div className="flex items-center gap-3">
-            <TextInputV2
+            <TextInput
               name="surname"
               label="Surname*"
               placeholder="Family name"
             />
-            <TextInputV2 type="search" name="otherNames" label="Other Names*" />
+            <TextInput type="search" name="otherNames" label="Other Names*" />
           </div>
           <div className="flex items-center gap-3">
             <SelectInput
@@ -89,39 +88,39 @@ export const AddMemberFormSheet: React.FC<Props> = ({ open, onChange }) => {
               label="Marital Status"
               data={selectorUtil.fromEnum(MaritalStatusEnum)}
             />
-            <TextInputV2
+            <TextInput
               type="date"
               name="anniversaryDate"
               label="Anniversary Date"
             />
           </div>
           <div className="flex items-center gap-3">
-            <TextInputV2
+            <TextInput
               type="tel"
               name="telephone1"
               label="Mobile Number*"
               placeholder="+234"
             />
-            <TextInputV2
+            <TextInput
               type="tel"
               name="telephone2"
-              label="Phone Number"
+              label="Office Number"
               placeholder="Second line"
             />
           </div>
-          <TextInputV2
+          <TextInput
             type="email"
             name="email"
             label="Email Address"
             placeholder="Ex. person@domain.com"
           />
-          <TextInputV2 type="search" name="homeAddress" label="Home Address" />
-          <TextInputV2
+          <TextInput type="search" name="homeAddress" label="Home Address" />
+          <TextInput
             type="search"
             name="officeAddress"
             label="Office Address"
           />
-          <TextInputV2
+          <TextInput
             name="occupation"
             label="Occupation"
             placeholder="Ex. Tailor, Student"
@@ -152,6 +151,17 @@ export const AddMemberFormSheet: React.FC<Props> = ({ open, onChange }) => {
           </SheetClose>
         </SheetFooter>
       </SheetContent>
+
+      <footer className="flex-center-between content-fluid fixed bottom-0 flex gap-4 border-t bg-white p-4">
+        <Button variant="secondary">Clear</Button>
+        <div className="flex items-center gap-4">
+          <Button variant="link">Fill Survey</Button>
+          <Button type="submit" className="flex items-center gap-2">
+            {/* <PlusIcon size={24} /> */}
+            Save
+          </Button>
+        </div>
+      </footer>
     </Sheet>
   );
 };

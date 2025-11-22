@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { CalendarDaysIcon, Calendar1Icon } from "lucide-react";
 import { AppBar } from "@/components/organisms/app-bar";
 import { SearchBar } from "@/components/organisms/search-bar";
@@ -9,16 +10,14 @@ import { Fab } from "@/components/organisms/fab";
 import { ListAccordion } from "@/components/atoms/list-accordion";
 import { MemberModel } from "@/core/models/MemberModel";
 import { selectorUtil } from "@/utils/selector.util";
+import { PATH } from "@/constants/PATH";
 import membersSeeder from "@/core/seeders/members-seeder.json";
-// 
+//
 import { HomeListContent } from "@/components/species/home/components/home-list-content";
-import { AddMemberFormSheet } from "@/components/species/home/components/add-member-form-sheet";
 
 export default function HomePage() {
-  const [openAddMemberSheet, setOpenAddMemberSheet] = useState(false);
-  const toggleAddMemberSheet = () => {
-    setOpenAddMemberSheet((prev) => !prev);
-  };
+  const router = useRouter();
+  const gotoAddMemberPage = () => router.push(PATH.createMember);
   //
   return (
     <>
@@ -26,9 +25,16 @@ export default function HomePage() {
       <div className="container-fluid">
         <SearchBar />
         <FilterChips
-          data={selectorUtil.fromList(["All", "Favour", "Mercy", "Victory"])}
+          value="0"
+          data={selectorUtil.fromList([
+            "All",
+            "Favour",
+            "Mercy",
+            "Victory",
+            "Men",
+          ])}
         />
-        <main className="mt-4 h-[calc(100vh-200px)] overflow-y-scroll px-4">
+        <main className="mt-4 scroll-view">
           <ListAccordion
             title="Today"
             badgeVariant="destructive"
@@ -57,11 +63,7 @@ export default function HomePage() {
           </ListAccordion>
         </main>
       </div>
-      <AddMemberFormSheet
-        open={openAddMemberSheet}
-        onChange={toggleAddMemberSheet}
-      />
-      <Fab onClick={toggleAddMemberSheet} />
+      <Fab onClick={gotoAddMemberPage} />
     </>
   );
 }

@@ -7,11 +7,23 @@
     @apply mx-auto sm:max-w-[480px];
   }
 
+  .content-fluid {
+    @apply w-full sm:w-[480px]
+  }
+
+  .scroll-view {
+    @apply h-[calc(100vh-60px)] overflow-y-scroll px-4
+  }
+
   .flex-center-center {
     @apply flex items-center justify-center;
   }
 
   .flex-center-between {
     @apply flex items-center justify-between;
+  }
+
+  .flex-center-end {
+    @apply flex items-center justify-end;
   }
 }

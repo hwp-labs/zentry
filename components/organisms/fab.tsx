@@ -1,15 +1,16 @@
 "use client";
 
+import { PropsWithChildren } from "react";
 import clsx from "clsx";
 import { PlusIcon } from "lucide-react";
 import { COLOR } from "@/constants/COLOR";
 
-interface Props {
+interface Props extends PropsWithChildren {
   variant?: "sm" | "md" | "lg";
   onClick?: VoidFunction;
 }
 
-export const Fab: React.FC<Props> = ({ variant = "sm", onClick }) => {
+export const Fab: React.FC<Props> = ({ children, variant = "sm", onClick }) => {
   const iconSize = { sm: 24, md: 28, lg: 36 }[variant];
   //
   return (
@@ -22,7 +23,7 @@ export const Fab: React.FC<Props> = ({ variant = "sm", onClick }) => {
         variant === "lg" && "size-[96px] rounded-[28px]",
       )}
     >
-      <PlusIcon size={iconSize} color={COLOR.white} />
+      {children || <PlusIcon size={iconSize} color={COLOR.white} />}
     </div>
   );
 };

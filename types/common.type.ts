@@ -33,9 +33,19 @@ export type ModelType = {
   title?: string;
 }
 
+export interface InputProps {
+  name: string;
+  label?: string;
+  placeholder?: string;
+  defaultValue?: string;
+  required?: boolean;
+  disabled?: boolean;
+  readOnly?: boolean;
+}
+
 export interface SelectorProps {
   value?: string;
   values?: ListType;
-  onChange?: (value: string, option?: unknown) => void;
+  onChange?: (value: string, option?: RecordType) => void;
   data?: OptionListType;
 }

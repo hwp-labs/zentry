@@ -1,5 +1,7 @@
 export type PathType = keyof typeof PATH;
 
+type Params = string | number
+
 export const PATH = {
   home: "/",
   // auth
@@ -8,6 +10,12 @@ export const PATH = {
   forgotPassword: "/forgot-password",
   createPassword: "/create-password",
   verifyEmail: "/verify-email",
+  // members
+  members: '/members',
+  createMember: '/members/create',
+  MemberDetails: (id: Params) => `/members/${id}`,
+  EditMember: (id: Params) => `/members/${id}/edit`,
+  MemberSurvey: (id: Params) => `/members/${id}/survey`,
 };
 
 export const ADMIN_PATH = {

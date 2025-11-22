@@ -10,7 +10,7 @@ import { PRIMARY_FONT, PRIMARY_MONO_FONT } from "@/constants/FONT";
 export const metadata: Metadata = {
   title: {
     template: `%s | ${APP.name}`,
-    default: APP.title,
+    default: APP.name,
   },
 };
 

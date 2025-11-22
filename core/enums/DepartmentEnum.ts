@@ -14,7 +14,7 @@ export enum DepartmentEnum {
   SANCTUARY_KEEPERS = "Sanctuary Keepers",
   MEDIA = "Media",
   SOUND = "Sound",
-  LIGHTING_GENERATOR = "Lighting/Generator",
+  LIGHTING_GENERATOR = "Lighting / Generator",
   CHILDREN_CHURCH = "Children Church",
   TEENS_CHURCH = "Teens Church",
   ICT = "ICT",

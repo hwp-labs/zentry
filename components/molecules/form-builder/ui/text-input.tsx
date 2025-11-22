@@ -1,10 +1,16 @@
-import { Field, FieldLabel } from "@/components/shadcn/ui/field";
-import { Label } from "@/components/shadcn/ui/label";
-import { Input } from "@/components/shadcn/ui/input";
-//
-import { FormBuilderInputProps } from "../types";
+"use client";
 
-interface Props extends FormBuilderInputProps {}
+import { PropsWithChildren } from "react";
+import { Field } from "@/components/shadcn/ui/field";
+import { Input } from "@/components/shadcn/ui/input";
+import { Textarea } from "@/components/shadcn/ui/textarea";
+import { InputProps } from "@/types/common.type";
+//
+import { InputLabel } from "./input-label";
+
+interface Props extends PropsWithChildren, InputProps {
+  type?: string;
+}
 
 export const TextInput: React.FC<Props> = ({
   name,
@@ -15,34 +21,27 @@ export const TextInput: React.FC<Props> = ({
 }) => {
   return (
     <Field>
-      {/* LABEL */}
       {label ? (
-        <div className="flex items-center">
-          <FieldLabel htmlFor={name}>{label}</FieldLabel>
-        </div>
+        <InputLabel name={name} required={required}>
+          {label}
+        </InputLabel>
       ) : null}
-      {/* INPUT */}
-      <Input
-        type={type}
-        id={name}
-        placeholder={placeholder}
-        required={required}
-      />
-    </Field>
-  );
-};
 
-export const TextInputV2: React.FC<Props> = ({
-  name,
-  type = "text",
-  label,
-  placeholder,
-  required,
-}) => {
-  return (
-    <div className="grid gap-3">
-      {label ? <Label htmlFor={name}>{label}</Label> : null}
-      <Input type={type} id={name} placeholder={placeholder} required={required} />
-    </div>
+      {type === "textarea" ? (
+        <Textarea
+          id={name}
+          placeholder={placeholder}
+          required={required}
+          className="resize-none"
+        />
+      ) : (
+        <Input
+          type={type}
+          id={name}
+          placeholder={placeholder}
+          required={required}
+        />
+      )}
+    </Field>
   );
 };

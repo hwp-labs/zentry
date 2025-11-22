@@ -1,6 +1,7 @@
 "use client";
 
 import { PropsWithChildren } from "react";
+import { Field } from "@/components/shadcn/ui/field";
 import {
   Select,
   SelectContent,
@@ -8,29 +9,30 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/shadcn/ui/select";
-import { Label } from "@/components/shadcn/ui/label";
-import { SelectorProps } from "@/types/common.type";
+import { InputProps, SelectorProps } from "@/types/common.type";
+//
+import { InputLabel } from "./input-label";
 
-interface Props extends PropsWithChildren, SelectorProps {
-  name?: string;
-  label?: string;
-  placeholder?: string;
-}
+interface Props extends PropsWithChildren, InputProps, SelectorProps {}
 
 export const SelectInput: React.FC<Props> = ({
-  name = "selectInput",
+  name,
   label,
-  placeholder = "Choose one",
-  value,
-  onChange = () => undefined,
+  placeholder,
+  defaultValue,
   data = [],
+  required,
 }) => {
-  //
   return (
-    <div className="grid gap-3">
-      {label ? <Label htmlFor={name}>{label}</Label> : null}
-      <Select>
-        <SelectTrigger id={name} className="">
+    <Field>
+      {label ? (
+        <InputLabel name={name} required={required}>
+          {label}
+        </InputLabel>
+      ) : null}
+
+      <Select defaultValue={defaultValue}>
+        <SelectTrigger id={name} className="w-full">
           <SelectValue placeholder={placeholder} />
         </SelectTrigger>
         <SelectContent>
@@ -41,6 +43,6 @@ export const SelectInput: React.FC<Props> = ({
           ))}
         </SelectContent>
       </Select>
-    </div>
+    </Field>
   );
 };

@@ -7,12 +7,11 @@ import { Badge } from "@/components/shadcn/ui/badge";
 import { IconCheck } from "@tabler/icons-react";
 import { SelectorProps } from "@/types/common.type";
 
-interface Props extends SelectorProps {
-}
+interface Props extends SelectorProps {}
 
 export const FilterChips: React.FC<Props> = ({
   value,
-  values = [],
+  values,
   onChange = () => undefined,
   data = [],
 }) => {
@@ -22,7 +21,7 @@ export const FilterChips: React.FC<Props> = ({
         const active = values
           ? values.includes(item.value)
           : value
-            ? value === item.value
+            ? value == item.value
             : false;
         const checked = values && active;
         //

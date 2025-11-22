@@ -3,9 +3,12 @@ import { PrimaryKeyType } from "./common/BaseModel";
 
 export interface MemberSurveyModel extends AuditableModel {
   memberId: PrimaryKeyType;
+  surveyId: PrimaryKeyType;
+  answer: PrimaryKeyType;
+  // 
   inviteeName?: string | null;
   inviteeDetails?: string | null;
-  inviteeIsAMember?: boolean;
+  inviteeIsMember?: boolean;
   becomeAMember?: boolean;
   homeVisit?: boolean;
   homeVisitDetails?: string | null;
