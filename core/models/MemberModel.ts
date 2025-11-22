@@ -21,5 +21,6 @@ export interface MemberModel extends AuditableModel {
   homeAddress?: AddressValueObject | null;
   officeAddress?: AddressValueObject | null;
   occupation?: string;
+  dateCaptured?: DateValueObject | null;
   status: AccountStatusEnum;
 }

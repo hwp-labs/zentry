@@ -4,7 +4,32 @@ import {
   ArrowLeftIcon,
   EllipsisVerticalIcon,
   LayoutGridIcon,
+  PhoneCallIcon,
+  PhoneIcon,
+  SettingsIcon,
+  BotMessageSquareIcon,
+  InfoIcon,
+  LifeBuoyIcon,
+  Settings2Icon,
+  LogInIcon,
+  RssIcon,
+  BugIcon,
 } from "lucide-react";
+import { Button } from "../shadcn/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuPortal,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuTrigger,
+} from "../shadcn/ui/dropdown-menu";
 import { AppAvatar } from "../atoms/app-avatar";
 import { APP } from "@/constants/APP";
 import { COLOR } from "@/constants/COLOR";
@@ -19,6 +44,7 @@ export const AppBar: React.FC<Props> = ({ title }) => {
   return (
     <header className="bg-brand px-4 shadow-lg">
       <div className="flex-center-between h-[60px] gap-2">
+        {/* LEFT */}
         <figure className="flex items-center gap-2.5">
           {title ? (
             <>
@@ -38,8 +64,25 @@ export const AppBar: React.FC<Props> = ({ title }) => {
             </>
           )}
         </figure>
+
+        {/* RIGHT */}
         {title ? (
-          <EllipsisVerticalIcon size={24} color={COLOR.white} />
+          <DropdownMenu>
+            <DropdownMenuTrigger className="m-0 p-0">
+              <EllipsisVerticalIcon size={24} color={COLOR.white} />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="mt-4 w-[160px]" align="end">
+              <DropdownMenuItem className="h-[48px] gap-2 text-label-lg">
+                <BugIcon size={24} />
+                Tech Support
+              </DropdownMenuItem>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem className="h-[48px] gap-2 text-label-lg">
+                <LogInIcon size={24} />
+                Sign in
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         ) : (
           <AppAvatar src={"/images/my-avatar.png"} text="U" />
         )}

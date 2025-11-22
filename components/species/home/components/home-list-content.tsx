@@ -1,5 +1,5 @@
 import { HomeIcon, PhoneIcon } from "lucide-react";
-import { ListItem } from "@/components/atoms/list-item";
+import { ListItem } from "@/components/atoms/lists/list-item";
 import { MemberModel } from "@/core/models/MemberModel";
 import { MemberPipe } from "@/core/pipes/MemberPipe";
 

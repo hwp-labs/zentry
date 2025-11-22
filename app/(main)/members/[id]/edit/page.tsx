@@ -156,6 +156,10 @@ export default function EditMemberPage() {
               label="Church Department"
               data={selectorUtil.fromEnum(DepartmentEnum)}
             />
+            <TextInput
+              name="dateCaptured"
+              label="Date Joined"
+            />
           </FormBuilder.Root>
         </main>
         <footer className="flex-center-between content-fluid fixed bottom-0 flex gap-4 border-t bg-white p-4">

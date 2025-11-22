@@ -150,12 +150,17 @@ export default function CreateMemberPage() {
                 label="Church Group"
                 data={selectorUtil.fromEnum(GroupEnum)}
               />
+            </FormBuilder.Grid>
             <SelectMultipleInput
               name="department"
               label="Church Department"
               data={selectorUtil.fromEnum(DepartmentEnum)}
             />
-            </FormBuilder.Grid>
+            <TextInput
+              type="date"
+              name="dateCaptured"
+              label="Date Joined"
+            />
           </FormBuilder.Root>
         </main>
         <footer className="flex-center-between content-fluid fixed bottom-0 flex gap-4 border-t bg-white p-4">

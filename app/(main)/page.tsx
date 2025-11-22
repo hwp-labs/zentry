@@ -5,9 +5,9 @@ import { useRouter } from "next/navigation";
 import { CalendarDaysIcon, Calendar1Icon } from "lucide-react";
 import { AppBar } from "@/components/organisms/app-bar";
 import { SearchBar } from "@/components/organisms/search-bar";
-import { FilterChips } from "@/components/atoms/chips/filter-chips";
+import { TagChips } from "@/components/atoms/chips/tag-chips";
 import { Fab } from "@/components/organisms/fab";
-import { ListAccordion } from "@/components/atoms/list-accordion";
+import { ListAccordion } from "@/components/atoms/lists/list-accordion";
 import { MemberModel } from "@/core/models/MemberModel";
 import { selectorUtil } from "@/utils/selector.util";
 import { PATH } from "@/constants/PATH";
@@ -22,9 +22,10 @@ export default function HomePage() {
   return (
     <>
       <AppBar />
-      <div className="container-fluid">
+      <div className="container-fluid pt-6 grid gap-6">
         <SearchBar />
-        <FilterChips
+
+        <TagChips
           value="0"
           data={selectorUtil.fromList([
             "All",
@@ -34,7 +35,8 @@ export default function HomePage() {
             "Men",
           ])}
         />
-        <main className="mt-4 scroll-view">
+
+        <main className="scroll-view">
           <ListAccordion
             title="Today"
             badgeVariant="destructive"
