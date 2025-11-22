@@ -57,7 +57,7 @@ export const AppBar: React.FC<Props> = ({ title }) => {
             </>
           ) : (
             <>
-              <AppAvatar src={"/logo.png"} text="Z" />
+              <AppAvatar src={"/logo.png"} alt="Z" />
               <figcaption className="text-title-lg text-white">
                 {APP.name}
               </figcaption>
@@ -84,7 +84,7 @@ export const AppBar: React.FC<Props> = ({ title }) => {
             </DropdownMenuContent>
           </DropdownMenu>
         ) : (
-          <AppAvatar src={"/images/my-avatar.png"} text="U" />
+          <AppAvatar src={"/images/my-avatar.png"} alt="U" />
         )}
       </div>
     </header>

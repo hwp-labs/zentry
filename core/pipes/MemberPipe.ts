@@ -25,7 +25,7 @@ export class MemberPipe extends BasePipe {
     const day = this.__.birthDate.day
     const month = this.__.birthDate.month
     const dateVO = new DateValueObject(day, month).toString()
-    return dateUtil.birthDate(dateVO);
+    return dateUtil.shortDate(dateVO);
   }
 
   get Anniversary() {
@@ -33,6 +33,6 @@ export class MemberPipe extends BasePipe {
     const day = this.__.anniversaryDate.day
     const month = this.__.anniversaryDate.month
     const dateVO = new DateValueObject(day, month).toString()
-    return dateUtil.birthDate(dateVO);
+    return dateUtil.shortDate(dateVO);
   }
 }

@@ -16,7 +16,7 @@
   }
 
   .horizontal-scroll {
-    @apply flex items-center overflow-x-auto
+    @apply flex items-center overflow-x-auto gap-2.5 pb-2
   }
 
   .flex-center-center {
