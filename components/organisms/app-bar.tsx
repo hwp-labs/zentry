@@ -6,18 +6,27 @@ import {
   LogInIcon,
   BugIcon,
   LogOutIcon,
+  Settings2Icon,
+  ShieldUserIcon,
+  SettingsIcon,
+  CircleUserIcon,
+  ServerIcon,
+  HouseIcon,
 } from "lucide-react";
 //
 import {
+  DropdownMenuGroup,
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
+  DropdownMenuLabel,
   DropdownMenuTrigger,
 } from "../shadcn/ui/dropdown-menu";
 import { AppAvatar } from "../atoms/app-avatar";
 import { APP } from "@/constants/APP";
 import { COLOR } from "@/constants/COLOR";
+import { PATH } from "@/constants/PATH";
 
 interface Props extends PropsWithChildren {
   title?: string;
@@ -25,6 +34,9 @@ interface Props extends PropsWithChildren {
 
 export const AppBar: React.FC<Props> = ({ children, title }) => {
   const router = useRouter();
+  const gotoHome = () => router.push(PATH.home);
+  const gotoSettings = () => router.push(PATH.dashboard);
+  const gotoLogin = () => router.push(PATH.login);
   //
   return (
     <header className="bg-brand px-4 shadow-lg">
@@ -59,12 +71,26 @@ export const AppBar: React.FC<Props> = ({ children, title }) => {
                 <EllipsisVerticalIcon size={24} color={COLOR.white} />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="mt-4 w-[160px]" align="end">
-                <DropdownMenuItem className="text-label-lg h-[48px] gap-2">
-                  <BugIcon size={24} />
-                  Tech Support
+                <DropdownMenuItem
+                  onClick={gotoHome}
+                  className="text-label-lg h-[48px] gap-2"
+                >
+                  <HouseIcon size={24} />
+                  Home
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={gotoSettings}
+                  className="text-label-lg h-[48px] gap-2"
+                  disabled
+                >
+                  <SettingsIcon size={24} />
+                  Settings
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem className="text-label-lg h-[48px] gap-2">
+                <DropdownMenuItem
+                  onClick={gotoLogin}
+                  className="text-label-lg h-[48px] gap-2"
+                >
                   <LogInIcon size={24} />
                   Sign in
                 </DropdownMenuItem>
@@ -77,15 +103,34 @@ export const AppBar: React.FC<Props> = ({ children, title }) => {
               <AppAvatar src={"/images/my-avatar.png"} alt="U" />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="mt-4 w-[160px]" align="end">
-              <DropdownMenuItem className="text-label-lg h-[48px] gap-2">
-                <BugIcon size={24} />
-                Tech Support
-              </DropdownMenuItem>
+              <DropdownMenuLabel className="flex items-center gap-2">
+                {/* <CircleUserIcon className="max-w-[16px]" /> */}
+                Hi, Emmanuel
+              </DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem className="text-label-lg h-[48px] gap-2">
-                <LogOutIcon size={24} />
-                Logout
-              </DropdownMenuItem>
+              <DropdownMenuGroup>
+                <DropdownMenuItem
+                  onClick={gotoHome}
+                  className="text-label-lg h-[48px] gap-2"
+                >
+                  <HouseIcon size={24} />
+                  Home
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={gotoSettings}
+                  className="text-label-lg h-[48px] gap-2"
+                >
+                  <SettingsIcon size={24} />
+                  Settings
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={gotoLogin}
+                  className="text-label-lg h-[48px] gap-2"
+                >
+                  <LogOutIcon size={24} />
+                  Sign out
+                </DropdownMenuItem>
+              </DropdownMenuGroup>
             </DropdownMenuContent>
           </DropdownMenu>
         )}

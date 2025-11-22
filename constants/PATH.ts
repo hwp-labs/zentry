@@ -14,6 +14,8 @@ export const PATH = {
   MemberDetails: (id: unknown) => `/members/${id}`,
   EditMember: (id: unknown) => `/members/${id}/edit`,
   MemberSurvey: (id: unknown) => `/members/${id}/survey`,
+  // dashboard
+  dashboard: '/dashboard'
 };
 
 export const ADMIN_PATH = {
