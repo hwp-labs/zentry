@@ -3,25 +3,38 @@
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { startCase } from "lodash";
-// 
+import clsx from "clsx";
+//
 import { Button } from "../shadcn/ui/button";
 import { getStatusText } from "@/constants/HTTP_STATUS_CODE";
 
 interface Props {
-  message?: string;
+  message?: string | object;
   statusCode?: number;
+  onReload?: VoidFunction;
 }
 
-export const AppError: React.FC<Props> = ({ message, statusCode = 404 }) => {
+export const AppError: React.FC<Props> = ({
+  message,
+  statusCode = 404,
+  onReload,
+}) => {
+  const messageIsObject = message && typeof message !== "string";
+  const statusText = getStatusText(statusCode);
+  //
   const router = useRouter();
   const pathname = usePathname();
-  const handleReload = () => router.refresh();
+  const handleReload = () => onReload ? onReload() : router.refresh();
   const handleBack = () => router.back();
-  const statusText = getStatusText(statusCode);
   //
   return (
     <div className="">
-      <figure className="mt-[100px] mb-[50px] px-6">
+      <figure
+        className={clsx(
+          "px-6",
+          messageIsObject ? "mt-10 mb-5" : "mt-[100px] mb-[50px]",
+        )}
+      >
         <Image
           src="/logo.png"
           alt=""
@@ -31,22 +44,24 @@ export const AppError: React.FC<Props> = ({ message, statusCode = 404 }) => {
           priority
         />
       </figure>
+      {/*  */}
       <main className="grid gap-6 px-6">
         <h1 className="text-xl font-medium">
-          {startCase(statusText)}
+          {startCase(statusText.toLowerCase())}
         </h1>
-
+        {/*  */}
         {message ? (
-          <p className="text-brand font-mono text-sm font-medium">{message}</p>
+          <pre className="text-code scroll-view max-h-[260px]">
+            {JSON.stringify(message, null, 2)}
+          </pre>
         ) : (
           <p>
             It appears the requested resource URL at{" "}
-            <strong className="text-brand font-mono text-sm font-medium">
-              {pathname}
-            </strong>{" "}
-            does not exist or has been moved temporarily.
+            <strong className="text-kbd">{pathname}</strong> does not exist or
+            has been moved temporarily.
           </p>
         )}
+        {/*  */}
         <article className="grid gap-0 text-[14px]">
           <p>Hint :</p>
           <ul className="ml-4 list-inside list-disc leading-[24px]">
@@ -55,10 +70,12 @@ export const AppError: React.FC<Props> = ({ message, statusCode = 404 }) => {
             <li>Contact Webmaster or Tech Support.</li>
           </ul>
         </article>
+        {/*  */}
         <h3 className="text-contrast text-sm">
           ERR_{statusCode}_{statusText}
         </h3>
       </main>
+      {/*  */}
       <footer className="fixed bottom-6 w-full px-6">
         <div className="grid gap-4">
           <Button onClick={handleReload} variant="default" className="h-[48px]">

@@ -17,6 +17,7 @@ export const AppSplash: React.FC = () => {
             className="flex-center-center rounded-full p-3"
             style={{ backgroundColor: COLOR.brand_20 }}
           >
+          {/*  */}
             <Image
               src="/logo.png"
               alt=""
@@ -28,6 +29,7 @@ export const AppSplash: React.FC = () => {
           </div>
         </div>
       </main>
+      {/*  */}
       <footer className="flex-center-center fixed bottom-6 flex-col gap-1">
         <h1
           className="text-3xl font-bold tracking-wide"

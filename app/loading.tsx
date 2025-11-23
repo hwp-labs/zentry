@@ -1,5 +1,5 @@
-import { Splash } from "@/components/organisms/splash";
+import { AppSplash } from "@/components/atoms/app-splash";
 
 export default function RootLoading() {
-  return <Splash />;
+  return <AppSplash />;
 }

@@ -6,5 +6,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootNotFound() {
-  return <AppError message="Cannot read property 'id' of null" statusCode={500} />;
+  return <AppError />;
 }
