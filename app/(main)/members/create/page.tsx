@@ -38,9 +38,7 @@ export default function CreateMemberPage() {
   //
   return (
     <>
-      <AppBar title="Add member">
-        <PhoneOutgoingIcon size={20} color={COLOR.white} />
-      </AppBar>
+      <AppBar title="Add member"/>
       <div className="container-fluid mt-4">
         <main className="scroll-view">
           <FormBuilder.Root

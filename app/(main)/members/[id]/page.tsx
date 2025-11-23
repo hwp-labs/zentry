@@ -28,8 +28,9 @@ const Item = new MemberPipe(item);
 
 export default function MemberDetailsPage() {
   const router = useRouter();
-  const handleEdit = () => router.push(PATH.createMember);
-  const handleEditSurvey = () => router.push(PATH.MemberSurvey(1));
+  const handleCall = () => alert("Calling...");
+  const handleEdit = () => router.push(PATH.EditMember(1));
+  const handleViewSurvey = () => router.push(PATH.MemberSurvey(1));
   //
   return (
     <>
@@ -50,7 +51,7 @@ export default function MemberDetailsPage() {
             </p>
             <div className="flex items-center gap-4">
               <Button
-                onClick={handleEdit}
+                onClick={handleCall}
                 className="mt-2 flex items-center gap-2 bg-green-600"
               >
                 <PhoneOutgoingIcon size={10} />
@@ -123,7 +124,7 @@ export default function MemberDetailsPage() {
           </section>
         </main>
         <footer className="content-fluid px-4 grid">
-          <Button onClick={handleEditSurvey} variant="secondary" className="_w-full h-[48px] text-primary">
+          <Button onClick={handleViewSurvey} variant="secondary" className="_w-full h-[48px] text-primary">
             View survey
           </Button>
         </footer>

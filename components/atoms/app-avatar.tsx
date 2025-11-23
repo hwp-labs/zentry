@@ -14,7 +14,7 @@ export const AppAvatar: React.FC<Props> = ({ src, alt = NA, size = 32 }) => {
   return (
     <Avatar
       className="border"
-      style={{ width, height, background: COLOR.brand20 }}
+      style={{ width, height, background: COLOR.brand_20 }}
     >
       {src ? <AvatarImage src={src} alt="" /> : null}
       <AvatarFallback className="text-title-md">
