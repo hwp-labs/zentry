@@ -11,7 +11,7 @@ export const RegisterButton: React.FC = () => {
   return (
     <Button
       type="button"
-      className="bg-contrast"
+      className="bg-contrast h-[40px]"
       onClick={() => router.push(PATH.register)}
     >
       Create an account

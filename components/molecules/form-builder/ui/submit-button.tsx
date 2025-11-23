@@ -14,7 +14,7 @@ export const SubmitButton: React.FC<Props> = ({ children, href }) => {
   const handleClick = () => (href ? router.push(href) : undefined);
   // RENDER
   return (
-    <Button type={href ? "button" : "submit"} onClick={handleClick}>
+    <Button type={href ? "button" : "submit"} className="h-[40px]" onClick={handleClick}>
       {children}
     </Button>
   );

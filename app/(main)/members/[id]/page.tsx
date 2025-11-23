@@ -11,6 +11,23 @@ import {
   Calendar1Icon,
   Share2Icon,
   CopyIcon,
+  ALargeSmallIcon,
+  CalendarRangeIcon,
+  GemIcon,
+  SendIcon,
+  HouseIcon,
+  StoreIcon,
+  GraduationCapIcon,
+  ChurchIcon,
+  UsersIcon,
+  StarIcon,
+  MailCheckIcon,
+  PhoneCallIcon,
+  HousePlusIcon,
+  HourglassIcon,
+  SproutIcon,
+  HeartIcon,
+  HandHeartIcon,
 } from "lucide-react";
 // 
 import { Button } from "@/components/shadcn/ui/button";
@@ -42,13 +59,13 @@ export default function MemberDetailsPage() {
         <main className="scroll-view">
           <AvatarUploader src="/images/my-avatar.png" />
           <section className="mt-4 flex flex-col items-center gap-2">
-            <h2 className="text-title-md">{Item.DisplayName} (Mr.)</h2>
+            {/* <h2 className="text-title-md">{Item.DisplayName} (Mr.)</h2>
             <p className="text-body-lg flex items-center gap-2">
               <VenusAndMarsIcon size={16} />
               {item.gender}
               <Calendar1Icon size={16} />
-              Sep 15
-            </p>
+              {Item.BirthDate}
+            </p> */}
             <div className="flex items-center gap-4">
               <Button
                 onClick={handleCall}
@@ -69,57 +86,74 @@ export default function MemberDetailsPage() {
 
           <section className="mt-4">
             <ListItem
+              label="Full Name"
+              value={`${Item.DisplayName} (Mr.)`}
+              icon={<ALargeSmallIcon size={24} className="text-contrast" />}
+              important
+              canCopy
+            />
+            <ListItem
+              label="Gender"
+              value={item.gender}
+              icon={<VenusAndMarsIcon size={24} className="text-contrast" />}
+            />
+            <ListItem
+              label="Birthdate"
+              value={Item.BirthDate}
+              icon={<Calendar1Icon size={24} className="text-contrast" />}
+            />
+            <ListItem
               label="Age Range"
               value="Between 30 - 39"
-              icon={<VenusAndMarsIcon size={24} className="text-contrast" />}
+              icon={<SproutIcon size={24} className="text-contrast" />}
             />
             <ListItem
               label="Marital Status"
               value="Married - Dec 2nd"
-              icon={<VenusAndMarsIcon size={24} className="text-contrast" />}
+              icon={<HandHeartIcon size={24} className="text-contrast" />}
             />
             <ListItem
               label="Telephone Number(s)"
               value="+2348169960927, 07066157335"
-              icon={<VenusAndMarsIcon size={24} className="text-contrast" />}
+              icon={<PhoneCallIcon size={22} className="text-contrast" />}
               canCopy
             />
             <ListItem
               label="Email Address"
               value="etugbeh@outlook.com"
-              icon={<VenusAndMarsIcon size={24} className="text-contrast" />}
+              icon={<MailCheckIcon size={24} className="text-contrast" />}
               canCopy
             />
             <ListItem
               label="Home Address"
               value="Oluwashola Cottage, Jubilee St., Evbukhu, Sapele Rd., B/c, Edo"
-              icon={<VenusAndMarsIcon size={24} className="text-contrast" />}
+              icon={<HousePlusIcon size={24} className="text-contrast" />}
               canCopy
             />
             <ListItem
               label="Office Address"
               value="N/A"
-              icon={<VenusAndMarsIcon size={24} className="text-contrast" />}
+              icon={<StoreIcon size={24} className="text-contrast" />}
             />
             <ListItem
               label="Occupation"
               value="Website & Mobile App Developer"
-              icon={<VenusAndMarsIcon size={24} className="text-contrast" />}
+              icon={<GraduationCapIcon size={26} className="text-contrast" />}
             />
             <ListItem
               label="Church House(s)"
               value="Favour"
-              icon={<VenusAndMarsIcon size={24} className="text-contrast" />}
+              icon={<ChurchIcon size={24} className="text-contrast" />}
             />
             <ListItem
               label="Church Group(s)"
               value="Group 2, Men"
-              icon={<VenusAndMarsIcon size={24} className="text-contrast" />}
+              icon={<UsersIcon size={24} className="text-contrast" />}
             />
             <ListItem
               label="Church Department(s)"
               value="Programs Arm, Media, ICT"
-              icon={<VenusAndMarsIcon size={24} className="text-contrast" />}
+              icon={<StarIcon size={22} className="text-contrast" />}
             />
           </section>
         </main>
@@ -137,6 +171,7 @@ interface ListItemProps {
   label: string;
   value?: string | null;
   icon: React.ReactNode;
+  important?: boolean;
   canCopy?: boolean;
 }
 
@@ -144,6 +179,7 @@ export const ListItem: React.FC<ListItemProps> = ({
   label,
   value,
   icon,
+  important,
   canCopy,
 }) => {
   return (
@@ -152,7 +188,7 @@ export const ListItem: React.FC<ListItemProps> = ({
       <div className="flex-center-between flex-1">
         <div className="grid gap-1">
           <p className="text-body-md text-muted-foreground">{label}</p>
-          <p className="text-body-md">{value}</p>
+          <p className={important ? "text-body-md font-medium" : "text-body-md"}>{value}</p>
         </div>
         {canCopy && (
           <CopyIcon size={18} className="text-muted-foreground min-w-[18px]" />

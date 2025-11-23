@@ -6,7 +6,7 @@ interface Props {
   src?: Blob | string | null;
 }
 
-const SIZE = 100;
+const SIZE = 120;
 
 export const AvatarUploader: React.FC<Props> = ({ src }) => {
   return (
