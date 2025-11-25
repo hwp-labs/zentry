@@ -1,47 +1,67 @@
-import { Hyperlink } from "@/components/atoms/hyperlink";
-import { TextInput } from "@/components/molecules/form-builder/ui/text-input";
-import { SubmitButton } from "@/components/molecules/form-builder/ui/submit-button";
+"use client";
+
+import { useRouter } from "next/navigation";
+import {
+  Field,
+  FieldGroup,
+  FieldLabel,
+  FieldSeparator,
+} from "@/components/shadcn/ui/field";
+import { Input } from "@/components/shadcn/ui/input";
+import { Button } from "@/components/shadcn/ui/button";
+import { AvatarUploader } from "@/components/atoms/avatar-uploader";
 import { PATH } from "@/constants/PATH";
 //
-import { AuthFormContainer } from "@/components/species/auth/components/auth-form-container";
-
-export const metadata = {
-  title: "Create an account",
-};
+import { AuthContainer } from "@/components/species/auth/components/auth-container";
 
 export default function RegisterPage() {
+  const router = useRouter();
+  const handleRegister = () => router.push(PATH.CreatePassword('token123'));
+  const handleLogin = () => router.push(PATH.login);
+  //
   return (
-    <AuthFormContainer
-      h1="Create an account"
-      p="Fill in the form details below"
+    <AuthContainer
+      title="Create your account"
+      description="Enter your email below to create your account"
     >
-      <TextInput
-        name="name"
-        label="Name"
-        placeholder="Ex. Mama Osato"
-        required
-      />
-      <TextInput
-        name="email"
-        type="email"
-        label="Email"
-        placeholder="Ex. person@domain.com"
-        required
-      />
-      <TextInput
-        name="telephone"
-        type="tel"
-        label="Telephone"
-        placeholder="Ex. +2340000000000"
-        required
-      />
-      <SubmitButton href={PATH.createPassword}>Continue</SubmitButton>
-      <div className="flex items-center justify-center gap-1">
-        <p className="text-muted-foreground text-sm text-balance">
-          Already have an account?
-        </p>
-        <Hyperlink href={PATH.login}>Log in</Hyperlink>
-      </div>
-    </AuthFormContainer>
+      <form>
+        <FieldGroup>
+          <Field>
+            <AvatarUploader />
+          </Field>
+          <Field>
+            <FieldLabel htmlFor="name">Full Name</FieldLabel>
+            <Input id="name" type="text" placeholder="John Doe" required />
+          </Field>
+          <Field>
+            <FieldLabel htmlFor="email">Email Address</FieldLabel>
+            <Input
+              id="email"
+              type="email"
+              placeholder="m@example.com"
+              required
+            />
+          </Field>
+          <Field>
+            <FieldLabel htmlFor="telephone">Phone Number</FieldLabel>
+            <Input id="telephone" type="tel" placeholder="+234" required />
+          </Field>
+          <Field className="grid gap-6">
+            <Button type="button" onClick={handleRegister} className="h-[40px]">
+              Create Account
+            </Button>
+            <FieldSeparator>OR</FieldSeparator>
+            <Button
+              type="button"
+              onClick={handleLogin}
+              variant="contrast"
+              className="h-[40px]"
+            >
+              Sign in
+            </Button>
+          </Field>
+        </FieldGroup>
+      </form>
+    </AuthContainer>
   );
 }

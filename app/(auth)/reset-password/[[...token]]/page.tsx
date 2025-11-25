@@ -14,14 +14,14 @@ import { PATH } from "@/constants/PATH";
 //
 import { AuthContainer } from "@/components/species/auth/components/auth-container";
 
-export default function CreatePasswordPage() {
+export default function ResetPasswordPage() {
   const router = useRouter();
-  const handleSave = () => router.push(PATH.CreatePasswordOtp('token123'));
-  const handleGoBack = () => router.push(PATH.register);
+  const handleSave = () => router.push(PATH.login);
+  const handleLogin = () => router.push(PATH.login);
   //
   return (
     <AuthContainer
-      title="Create password"
+      title="Reset password"
       description="Enter your email below to log in to your account"
     >
       <form>
@@ -50,11 +50,11 @@ export default function CreatePasswordPage() {
             </Button>
             <Button
               type="button"
-              onClick={handleGoBack}
+              onClick={handleLogin}
               variant="link"
               className="debug_ _h-[40px]"
             >
-              Go back
+              Cancel
             </Button>
           </Field>
         </FieldGroup>

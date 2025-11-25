@@ -5,17 +5,19 @@ export const PATH = {
   // auth
   login: "/login",
   register: "/register",
+  CreatePassword: (token: string) => `/create-password/${token}`,
+  CreatePasswordOtp: (token: string) => `/create-password-otp/${token}`,
   forgotPassword: "/forgot-password",
-  createPassword: "/create-password",
-  verifyEmail: "/verify-email",
+  ForgotPasswordOtp: (token: string) => `/forgot-password-otp/${token}`,
+  ResetPassword: (token: string) => `/reset-password/${token}`,
   // members
-  members: '/members',
-  createMember: '/members/create',
-  MemberDetails: (id: unknown) => `/members/${id}`,
-  EditMember: (id: unknown) => `/members/${id}/edit`,
-  MemberSurvey: (id: unknown) => `/members/${id}/survey`,
+  members: "/members",
+  createMember: "/members/create",
+  MemberDetails: (id: string | number) => `/members/${id}`,
+  EditMember: (id: string | number) => `/members/${id}/edit`,
+  MemberSurvey: (id: string | number) => `/members/${id}/survey`,
   // dashboard
-  dashboard: '/dashboard'
+  dashboard: "/dashboard",
 };
 
 export const ADMIN_PATH = {
