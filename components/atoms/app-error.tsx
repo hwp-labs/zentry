@@ -28,7 +28,7 @@ export const AppError: React.FC<Props> = ({
   const handleBack = () => router.back();
   //
   return (
-    <div className="">
+    <div className="container-fluid">
       <figure
         className={clsx(
           "px-6",

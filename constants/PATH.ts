@@ -13,9 +13,9 @@ export const PATH = {
   // members
   members: "/members",
   createMember: "/members/create",
-  MemberDetails: (id: string | number) => `/members/${id}`,
-  EditMember: (id: string | number) => `/members/${id}/edit`,
-  MemberSurvey: (id: string | number) => `/members/${id}/survey`,
+  MemberDetails: (id: unknown) => `/members/${id}`,
+  EditMember: (id: unknown) => `/members/${id}/edit`,
+  MemberSurvey: (id: unknown) => `/members/${id}/survey`,
   // dashboard
   dashboard: "/dashboard",
 };
